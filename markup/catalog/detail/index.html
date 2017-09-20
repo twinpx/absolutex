@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main page | absolutex</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400&amp;subset=latin,cyrillic" rel="stylesheet">
+    <script src="/template/jquery.js"></script>
+    <script src="/template/jscript.js"></script>
+  </head>
+  <body>
+    <header class="bj-page-header">
+      <section class="bj-page-header__top">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-10 col-sm-9 col-xs-12 bj-logo-space"><a href="/" class="bj-logo"></a><a href="/"><img width="143" alt="logoasobio.png" src="/upload/medialibrary/25f/25fe69fdf63b2c1b012714e8c22ff164.png" height="40" title="logoasobio.png"></a>
+              <!-- nclude virtual="/blocks/page/header/user.html"-->
+              <button href="#" data-content="&lt;a href=&quot;/auth/&quot;&gt;Войти&lt;/a&gt;&lt;a href=&quot;/auth/?register=yes&quot;&gt;Зарегистрироваться&lt;/a&gt;" data-original-title="" title="" class="bj-logo-space__icon glyphicon glyphicon-user hidden-sm hidden-xs"></button><span id="sale-basket-basket-line-container"><a id="bx_cart_block" href="/personal/cart/" class="bj-logo-space__icon bj-cart-icon"><span data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Корзина" class="glyphicon glyphicon-shopping-cart"></span><span id="bx_cart_num" class="bj-cart-icon__num">0</span></a></span><span id="search" class="bj-page-header__search hidden-sm hidden-xs"><span href="" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Поиск" class="glyphicon glyphicon-search hidden-sm hidden-xs"></span>
+                <form action="/catalog/">
+                  <input id="title-search-input" type="search" name="q" value="" size="23" maxlength="50" autocomplete="off" class="bj-page-header__search__input form-control">
+                  <input name="s" type="hidden" value="">
+                </form></span><a id="nav-button" href="#" data-activates="sideNavPanel" class="bj-nav-button"><span data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Меню" class="glyphicon glyphicon-align-justify"></span></a>
+              <nav class="bj-top-nav hidden-xs"><a href="/about/howto/">Как купить</a><a href="/news">Новости</a><a href="/about/">О магазине</a><a href="/about/contacts/">Контакты</a></nav>
+            </div>
+            <style>
+              @media (max-width: 767px) {
+              .bj-logo-space__icon.bj-cart-icon {
+              float: right;
+              margin: 0 43px 0 0;
+              }
+              }
+            </style>
+            <div class="col-md-2 col-sm-3 bj-phone"><span class="bj-phone__num hidden-xs">
+                <div>+7 (495) 281-52-52</div>
+                <!-- <span class="bj-phone__time">c 8:00 до 23:00</span>--></span><a href="#" data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-earphone hidden-xs"></a><a href="tel:&lt;div&gt;          +7 (495) 281-52-52          &lt;/div&gt;          " class="glyphicon glyphicon-earphone visible-xs-block"></a>
+              <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+                <div role="document" class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                      <div id="myModalLabel" style="font-size:13pt" class="modal-title text-center">Наш телефон</div>
+                    </div>
+                    <div class="modal-body text-center">
+                      <div class="bj-text-x-large">
+                        <div>+7 (495) 281-52-52</div>
+                      </div>
+                      <div class="small">Пн-Вс 10-22</div>
+                    </div>
+                    <div style="display:none" class="modal-footer text-center">
+                      <button type="button" class="btn btn-default">Заказать звонок</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-rel="426" class="bj-page-header__dropdown b-asobio-subnav__dropdown container-fluid">
+        <div class="i-relative">
+          <article>
+            <div class="row">
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/verkhnyaya_odezhda/">Верхняя одежда</a></div>
+                <menu>
+                  <li><a href="/catalog/kurtki/">Куртки</a></li>
+                  <li><a href="/catalog/palto/">Пальто</a></li>
+                  <li><a href="/catalog/plashchi/">Плащи</a></li>
+                  <li><a href="/catalog/outlet/">OUTLET</a></li>
+                </menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/kostyumy_i_pidzhaki/">Костюмы и пиджаки</a></div>
+                <menu>
+                  <li><a href="/catalog/kostyumy/">Костюмы</a></li>
+                  <li><a href="/catalog/pidzhaki/">Пиджаки</a></li>
+                  <li><a href="/catalog/zhilety/">Жилеты</a></li>
+                </menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/rubashki_i_bryuki/">Рубашки и брюки</a></div>
+                <menu>
+                  <li><a href="/catalog/rubashki/">Рубашки</a></li>
+                  <li><a href="/catalog/bryuki/">Брюки</a></li>
+                  <li><a href="/catalog/dzhempery/">Джемперы</a></li>
+                </menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/nizhnee_bele/">Нижнее белье</a></div>
+                <menu>
+                  <li><a href="/catalog/futbolki_i_vodolazki/">Футболки и водолазки</a></li>
+                  <li><a href="/catalog/trusy/">Трусы</a></li>
+                </menu>
+              </div>
+            </div>
+            <button class="up"></button>
+          </article>
+        </div>
+      </section>
+      <section data-rel="462" class="bj-page-header__dropdown b-asobio-subnav__dropdown container-fluid">
+        <div class="i-relative">
+          <article>
+            <div class="row">
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/muzhskie/">Мужские</a></div>
+                <menu>
+                  <li><a href="/catalog/sumki/">Сумки</a></li>
+                  <li><a href="/catalog/galstuki_1/">Галстуки</a></li>
+                  <li><a href="/catalog/babochki_1/">Бабочки</a></li>
+                  <li><a href="/catalog/podarochnye_nabory_1/">Подарочные наборы</a></li>
+                </menu>
+              </div>
+            </div>
+            <button class="up"></button>
+          </article>
+        </div>
+      </section>
+      <section data-rel="465" class="bj-page-header__dropdown b-asobio-subnav__dropdown container-fluid">
+        <div class="i-relative">
+          <article>
+            <div class="row">
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/verkhnyaya_odezhda_1/">Верхняя одежда</a></div>
+                <menu>
+                  <li><a href="/catalog/kurtki_1/">Куртки</a></li>
+                  <li><a href="/catalog/palto_1/">Пальто</a></li>
+                </menu>
+              </div>
+            </div>
+            <button class="up"></button>
+          </article>
+        </div>
+      </section>
+      <section data-rel="444" class="bj-page-header__dropdown b-asobio-subnav__dropdown container-fluid">
+        <div class="i-relative">
+          <article>
+            <div class="row">
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/dlya_muzhchin/">Для мужчин</a></div>
+                <menu>
+                  <li><a href="/catalog/kurtki_3/">Куртки</a></li>
+                  <li><a href="/catalog/palto_3/">Пальто</a></li>
+                  <li><a href="/catalog/kostyumy_1/">Костюмы</a></li>
+                  <li><a href="/catalog/pidzhaki_1/">Пиджаки</a></li>
+                  <li><a href="/catalog/bryuki_1/">Брюки</a></li>
+                  <li><a href="/catalog/rubashki_1/">Рубашки</a></li>
+                </menu>
+              </div>
+            </div>
+            <button class="up"></button>
+          </article>
+        </div>
+      </section>
+      <section data-rel="528" class="bj-page-header__dropdown b-asobio-subnav__dropdown container-fluid">
+        <div class="i-relative">
+          <article>
+            <div class="row">
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/muzhskaya/">Мужская</a></div>
+                <menu>
+                  <li><a href="/catalog/tufli_1/">Туфли</a></li>
+                  <li><a href="/catalog/botinki_1/">Ботинки</a></li>
+                  <li><a href="/catalog/krosovki_i_kedy/">Кросовки и кеды</a></li>
+                  <li><a href="/catalog/sapogi/">Сапоги</a></li>
+                </menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/catalog/zhenskaya/">Женская</a></div>
+                <menu>
+                  <li><a href="/catalog/bosonozhki/">Босоножки</a></li>
+                  <li><a href="/catalog/krossovki/">Кроссовки</a></li>
+                  <li><a href="/catalog/tufli_2/">Туфли</a></li>
+                </menu>
+              </div>
+            </div>
+            <button class="up"></button>
+          </article>
+        </div>
+      </section>
+      <section data-rel="brandtopmenu" class="bj-page-header__dropdown b-asobio-subnav__dropdown">
+        <div class="i-relative container-fluid">
+          <article>
+            <div class="row">
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/roberto_cassini/">Roberto Cassini</a></div>
+                <menu></menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/giovanni_fratelli/">Giovanni Fratelli</a></div>
+                <menu></menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/massimo_santini/">Massimo Santini</a></div>
+                <menu></menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/rinnaldi/">Rinnaldi</a></div>
+                <menu></menu>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/silvio_virelli/">Silvio Virelli</a></div>
+                <menu></menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/jonh_/">John Richmond</a></div>
+                <menu></menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/andrea_pagliarini/">Andrea Pagliarini</a></div>
+                <menu></menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/koil/">KOIL</a></div>
+                <menu></menu>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/gnv/">GNV</a></div>
+                <menu></menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/bazioni/">BAZIONI</a></div>
+                <menu></menu>
+              </div>
+              <div class="col-md-3">
+                <div style="text-transform: uppercase;" class="h3"><a href="/brand/absolutex/">Absolutex</a></div>
+                <menu></menu>
+              </div>
+            </div>
+            <button class="up"></button>
+          </article>
+        </div>
+      </section>
+      <section style="width:100%" class="bj-page-header__submenu b-asobio-subnav">
+        <div class="container-fluid">
+          <nav class="bj-top-subnav">
+            <!-- ----------------------><a href="/catalog/muzhchinam/" data-rel="426" style="background-image: url(/upload/uf/176/176e1972e4dc54b7661d89529cd4f57c.png);" class="open">Мужчинам</a>
+            <!-- ----------------------><a href="/catalog/aksessuary/" data-rel="462" style="background-image: url(/upload/uf/54f/54fa34accf21888d3efe7a912d081cb9.png);" class="open">Аксессуары</a>
+            <!-- ----------------------><a href="/catalog/zhenshchinam/" data-rel="465" style="background-image: url(/upload/uf/fd0/fd087f54342faa794043e899bc4d5a9f.png);" class="open">Женщинам</a>
+            <!-- ----------------------><a href="/catalog/posledniy_razmer/" data-rel="444" style="background-image: url(/upload/uf/e43/e43d6e3ff81c35e00d21c13571437898.png);" class="open">Последний размер</a>
+            <!-- ----------------------><a href="/catalog/obuv/" data-rel="528" style="background-image: url();" class="open">Обувь</a>
+            <!-- a href="" class="open" data-rel="444" style="background-image: url(/upload/uf/e43/e43d6e3ff81c35e00d21c13571437898.png);">Распродажа</a-->
+            <!-- a href="/brand/" data-rel="brandtopmenu" class="open" style="background-image: url(/upload/brand.png);">Бренды</a--><a href="/campaign/" style="background-image: url(/upload/campaign.png);">Акции</a>
+          </nav>
+        </div>
+      </section>
+      <div class="bj-top-decoration-in-menu"></div>
+    </header>
+    <section class="b-container">
+      <div class="bj-page-content container-fluid">
+        <ol class="breadcrumb">
+          <li><a href="/" title="Главная страница">Главная страница</a></li>
+          <li><a href="/catalog/" title="Каталог">Каталог</a></li>
+          <li><a href="/catalog/muzhchinam/" title="Мужчинам">Мужчинам</a></li>
+          <li><a href="/catalog/verkhnyaya_odezhda/" title="Верхняя одежда">Верхняя одежда</a></li>
+          <li><a href="/catalog/palto/" title="Пальто">Пальто</a></li>
+          <li><a href="/catalog/chernoe_muzhskoe_palto/" title="Черное мужское пальто">Черное мужское пальто</a></li>
+          <li><span>Мужское зимнее шерстяное пальто VENTUNO BLACK черно-серого цвета</span></li>
+        </ol>
+        <!-- start /components/catalog.detail/-->
+        <link rel="stylesheet" href="/components/catalog.detail/style.css">
+        <script src="/components/catalog.detail/script.js"></script>
+        <h1 class="i-small">Мужское зимнее шерстяное пальто VENTUNO BLACK черно-серого цвета</h1>
+        <div class="row">
+          <div class="col-sm-6">
+            <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+            <div data-nav="thumbs" class="fotorama"><img src="/upload/catalog/1.jpg" alt=""><img src="/upload/catalog/2.jpg" alt=""><img src="/upload/catalog/3.jpg" alt=""><img src="/upload/catalog/4.jpg" alt=""></div>
+          </div>
+          <div class="col-sm-6">
+            <!--Минимальная цена указывается в самом диве. Показывается если ничего не выбрано-->
+            <div data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." class="b-catalog-detail__info i-1">
+              <div class="row">
+                <div class="col-xs-3 b-catalog-detail__old-price">
+                  <h5>Старая цена</h5>
+                  <s>14 257 руб.</s>
+                </div>
+                <div class="col-xs-3 b-catalog-detail__discount">
+                  <h5>Выгода</h5><span>1 300 руб.</span>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <div class="b-catalog-detail__price i-sale">1 300 руб.</div>
+                </div>
+              </div>
+              <hr class="i-size-M i-line">
+              <div class="b-catalog-detail__sizes">
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="1400 руб." data-discount="110 руб." data-oldprice="1510 руб." data-id="10" class="b-catalog-detail__sizes-item">
+                    <div>44</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="1500 руб." data-discount="120 руб." data-oldprice="1620 руб." data-id="11" class="b-catalog-detail__sizes-item">
+                    <div>46</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="1600 руб." data-discount="130 руб." data-oldprice="1730 руб." data-id="12" class="b-catalog-detail__sizes-item">
+                    <div>48</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="1700 руб." data-discount="140 руб." data-oldprice="1840 руб." data-id="13" class="b-catalog-detail__sizes-item">
+                    <div>50</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="1800 руб." data-discount="150 руб." data-oldprice="1950 руб." data-id="14" class="b-catalog-detail__sizes-item">
+                    <div>52</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="1900 руб." data-discount="160 руб." data-oldprice="2060 руб." data-id="15" class="b-catalog-detail__sizes-item">
+                    <div>54</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="2000 руб." data-discount="170 руб." data-oldprice="2170 руб." data-id="16" class="b-catalog-detail__sizes-item">
+                    <div>56</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="2100 руб." data-discount="180 руб." data-oldprice="2280 руб." data-id="17" class="b-catalog-detail__sizes-item">
+                    <div>58</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="2200 руб." data-discount="190 руб." data-oldprice="2390 руб." data-id="18" class="b-catalog-detail__sizes-item">
+                    <div>60</div>
+                    <div>164</div>
+                  </div>
+                  <div data-price="2300 руб." data-discount="200 руб." data-oldprice="2500 руб." data-id="19" class="b-catalog-detail__sizes-item">
+                    <div>62</div>
+                    <div>164</div>
+                  </div>
+                </div>
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="2400 руб." data-discount="210 руб." data-oldprice="2610 руб." data-id="20" class="b-catalog-detail__sizes-item">
+                    <div>44</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="2500 руб." data-discount="220 руб." data-oldprice="2720 руб." data-id="21" class="b-catalog-detail__sizes-item">
+                    <div>46</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="2600 руб." data-discount="230 руб." data-oldprice="2830 руб." data-id="22" class="b-catalog-detail__sizes-item">
+                    <div>48</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="2700 руб." data-discount="240 руб." data-oldprice="2940 руб." data-id="23" class="b-catalog-detail__sizes-item">
+                    <div>50</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="2800 руб." data-discount="250 руб." data-oldprice="3050 руб." data-id="24" class="b-catalog-detail__sizes-item">
+                    <div>52</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="2900 руб." data-discount="260 руб." data-oldprice="3160 руб." data-id="25" class="b-catalog-detail__sizes-item">
+                    <div>54</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="3000 руб." data-discount="270 руб." data-oldprice="3270 руб." data-id="26" class="b-catalog-detail__sizes-item">
+                    <div>56</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="3100 руб." data-discount="280 руб." data-oldprice="3380 руб." data-id="27" class="b-catalog-detail__sizes-item">
+                    <div>58</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="3200 руб." data-discount="290 руб." data-oldprice="3490 руб." data-id="28" class="b-catalog-detail__sizes-item">
+                    <div>60</div>
+                    <div>170</div>
+                  </div>
+                  <div data-price="3300 руб." data-discount="300 руб." data-oldprice="3600 руб." data-id="29" class="b-catalog-detail__sizes-item">
+                    <div>62</div>
+                    <div>170</div>
+                  </div>
+                </div>
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="3400 руб." data-discount="310 руб." data-oldprice="3710 руб." data-id="30" class="b-catalog-detail__sizes-item">
+                    <div>44</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="3500 руб." data-discount="320 руб." data-oldprice="3820 руб." data-id="31" class="b-catalog-detail__sizes-item">
+                    <div>46</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="3600 руб." data-discount="330 руб." data-oldprice="3930 руб." data-id="32" class="b-catalog-detail__sizes-item">
+                    <div>48</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="3700 руб." data-discount="340 руб." data-oldprice="4040 руб." data-id="33" class="b-catalog-detail__sizes-item">
+                    <div>50</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="3800 руб." data-discount="350 руб." data-oldprice="4150 руб." data-id="34" class="b-catalog-detail__sizes-item">
+                    <div>52</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="3900 руб." data-discount="360 руб." data-oldprice="4260 руб." data-id="35" class="b-catalog-detail__sizes-item">
+                    <div>54</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="4000 руб." data-discount="370 руб." data-oldprice="4370 руб." data-id="36" class="b-catalog-detail__sizes-item">
+                    <div>56</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="4100 руб." data-discount="380 руб." data-oldprice="4480 руб." data-id="37" class="b-catalog-detail__sizes-item">
+                    <div>58</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="4200 руб." data-discount="390 руб." data-oldprice="4590 руб." data-id="38" class="b-catalog-detail__sizes-item">
+                    <div>60</div>
+                    <div>176</div>
+                  </div>
+                  <div data-price="4300 руб." data-discount="400 руб." data-oldprice="4700 руб." data-id="39" class="b-catalog-detail__sizes-item">
+                    <div>62</div>
+                    <div>176</div>
+                  </div>
+                </div>
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="4400 руб." data-discount="410 руб." data-oldprice="4810 руб." data-id="40" class="b-catalog-detail__sizes-item">
+                    <div>44</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="4500 руб." data-discount="420 руб." data-oldprice="4920 руб." data-id="41" class="b-catalog-detail__sizes-item">
+                    <div>46</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="4600 руб." data-discount="430 руб." data-oldprice="5030 руб." data-id="42" class="b-catalog-detail__sizes-item">
+                    <div>48</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="4700 руб." data-discount="440 руб." data-oldprice="5140 руб." data-id="43" class="b-catalog-detail__sizes-item">
+                    <div>50</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="4800 руб." data-discount="450 руб." data-oldprice="5250 руб." data-id="44" class="b-catalog-detail__sizes-item">
+                    <div>52</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="4900 руб." data-discount="460 руб." data-oldprice="5360 руб." data-id="45" class="b-catalog-detail__sizes-item">
+                    <div>54</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="5000 руб." data-discount="470 руб." data-oldprice="5470 руб." data-id="46" class="b-catalog-detail__sizes-item">
+                    <div>56</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="5100 руб." data-discount="480 руб." data-oldprice="5580 руб." data-id="47" class="b-catalog-detail__sizes-item">
+                    <div>58</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="5200 руб." data-discount="490 руб." data-oldprice="5690 руб." data-id="48" class="b-catalog-detail__sizes-item">
+                    <div>60</div>
+                    <div>182</div>
+                  </div>
+                  <div data-price="5300 руб." data-discount="500 руб." data-oldprice="5800 руб." data-id="49" class="b-catalog-detail__sizes-item">
+                    <div>62</div>
+                    <div>182</div>
+                  </div>
+                </div>
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="5400 руб." data-discount="510 руб." data-oldprice="5910 руб." data-id="50" class="b-catalog-detail__sizes-item">
+                    <div>44</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="5500 руб." data-discount="520 руб." data-oldprice="6020 руб." data-id="51" class="b-catalog-detail__sizes-item">
+                    <div>46</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="5600 руб." data-discount="530 руб." data-oldprice="6130 руб." data-id="52" class="b-catalog-detail__sizes-item">
+                    <div>48</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="5700 руб." data-discount="540 руб." data-oldprice="6240 руб." data-id="53" class="b-catalog-detail__sizes-item">
+                    <div>50</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="5800 руб." data-discount="550 руб." data-oldprice="6350 руб." data-id="54" class="b-catalog-detail__sizes-item">
+                    <div>52</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="5900 руб." data-discount="560 руб." data-oldprice="6460 руб." data-id="55" class="b-catalog-detail__sizes-item">
+                    <div>54</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="6000 руб." data-discount="570 руб." data-oldprice="6570 руб." data-id="56" class="b-catalog-detail__sizes-item">
+                    <div>56</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="6100 руб." data-discount="580 руб." data-oldprice="6680 руб." data-id="57" class="b-catalog-detail__sizes-item">
+                    <div>58</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="6200 руб." data-discount="590 руб." data-oldprice="6790 руб." data-id="58" class="b-catalog-detail__sizes-item">
+                    <div>60</div>
+                    <div>188</div>
+                  </div>
+                  <div data-price="6300 руб." data-discount="600 руб." data-oldprice="6900 руб." data-id="59" class="b-catalog-detail__sizes-item">
+                    <div>62</div>
+                    <div>188</div>
+                  </div>
+                </div>
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="6400 руб." data-discount="610 руб." data-oldprice="7010 руб." data-id="60" class="b-catalog-detail__sizes-item">
+                    <div>44</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="6500 руб." data-discount="620 руб." data-oldprice="7120 руб." data-id="61" class="b-catalog-detail__sizes-item">
+                    <div>46</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="6600 руб." data-discount="630 руб." data-oldprice="7230 руб." data-id="62" class="b-catalog-detail__sizes-item">
+                    <div>48</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="6700 руб." data-discount="640 руб." data-oldprice="7340 руб." data-id="63" class="b-catalog-detail__sizes-item">
+                    <div>50</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="6800 руб." data-discount="650 руб." data-oldprice="7450 руб." data-id="64" class="b-catalog-detail__sizes-item">
+                    <div>52</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="6900 руб." data-discount="660 руб." data-oldprice="7560 руб." data-id="65" class="b-catalog-detail__sizes-item">
+                    <div>54</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="7000 руб." data-discount="670 руб." data-oldprice="7670 руб." data-id="66" class="b-catalog-detail__sizes-item">
+                    <div>56</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="7100 руб." data-discount="680 руб." data-oldprice="7780 руб." data-id="67" class="b-catalog-detail__sizes-item">
+                    <div>58</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="7200 руб." data-discount="690 руб." data-oldprice="7890 руб." data-id="68" class="b-catalog-detail__sizes-item">
+                    <div>60</div>
+                    <div>194</div>
+                  </div>
+                  <div data-price="7300 руб." data-discount="700 руб." data-oldprice="8000 руб." data-id="69" class="b-catalog-detail__sizes-item">
+                    <div>62</div>
+                    <div>194</div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="b-catalog-detail__order">
+                    Вы выбрали
+                     <span class="b-catalog-detail__order-num">9 размеров</span>
+                  </div>
+                </div>
+                <div class="col-sm-6"><a href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" class="btn btn-default btn-size-L bj-cart-button btn-100 i-disabled">Добавить в корзину</a></div>
+              </div>
+            </div>
+            <hr>
+            <div data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." class="b-catalog-detail__info i-2">
+              <div class="row">
+                <div class="col-xs-3 b-catalog-detail__old-price">
+                  <h5>Старая цена</h5>
+                  <s>14 257 руб.</s>
+                </div>
+                <div class="col-xs-3 b-catalog-detail__discount">
+                  <h5>Выгода</h5><span>1 300 руб.</span>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <div class="b-catalog-detail__price">1 300 руб.</div>
+                </div>
+              </div>
+              <hr class="i-size-M i-line">
+              <div class="b-catalog-detail__sizes">
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="5100 руб." data-discount="510 руб." data-oldprice="5610 руб." data-id="70" class="b-catalog-detail__sizes-item">
+                    <div>37</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="5200 руб." data-discount="520 руб." data-oldprice="5720 руб." data-id="71" class="b-catalog-detail__sizes-item">
+                    <div>39</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="5300 руб." data-discount="530 руб." data-oldprice="5830 руб." data-id="72" class="b-catalog-detail__sizes-item">
+                    <div>41</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="5400 руб." data-discount="540 руб." data-oldprice="5940 руб." data-id="73" class="b-catalog-detail__sizes-item">
+                    <div>43</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="5500 руб." data-discount="550 руб." data-oldprice="6050 руб." data-id="74" class="b-catalog-detail__sizes-item">
+                    <div>45</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="5600 руб." data-discount="560 руб." data-oldprice="6160 руб." data-id="75" class="b-catalog-detail__sizes-item">
+                    <div>47</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="5700 руб." data-discount="570 руб." data-oldprice="6270 руб." data-id="76" class="b-catalog-detail__sizes-item">
+                    <div>49</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="5800 руб." data-discount="580 руб." data-oldprice="6380 руб." data-id="77" class="b-catalog-detail__sizes-item">
+                    <div>51</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="5900 руб." data-discount="590 руб." data-oldprice="6490 руб." data-id="78" class="b-catalog-detail__sizes-item">
+                    <div>53</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="6000 руб." data-discount="600 руб." data-oldprice="6600 руб." data-id="79" class="b-catalog-detail__sizes-item">
+                    <div>55</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="6100 руб." data-discount="610 руб." data-oldprice="6710 руб." data-id="80" class="b-catalog-detail__sizes-item">
+                    <div>57</div>
+                    <div>170-176</div>
+                  </div>
+                  <div data-price="6200 руб." data-discount="620 руб." data-oldprice="6820 руб." data-id="81" class="b-catalog-detail__sizes-item">
+                    <div>59</div>
+                    <div>170-176</div>
+                  </div>
+                </div>
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="6300 руб." data-discount="630 руб." data-oldprice="6930 руб." data-id="82" class="b-catalog-detail__sizes-item">
+                    <div>37</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="6400 руб." data-discount="640 руб." data-oldprice="7040 руб." data-id="83" class="b-catalog-detail__sizes-item">
+                    <div>39</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="6500 руб." data-discount="650 руб." data-oldprice="7150 руб." data-id="84" class="b-catalog-detail__sizes-item">
+                    <div>41</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="6600 руб." data-discount="660 руб." data-oldprice="7260 руб." data-id="85" class="b-catalog-detail__sizes-item">
+                    <div>43</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="6700 руб." data-discount="670 руб." data-oldprice="7370 руб." data-id="86" class="b-catalog-detail__sizes-item">
+                    <div>45</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="6800 руб." data-discount="680 руб." data-oldprice="7480 руб." data-id="87" class="b-catalog-detail__sizes-item">
+                    <div>47</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="6900 руб." data-discount="690 руб." data-oldprice="7590 руб." data-id="88" class="b-catalog-detail__sizes-item">
+                    <div>49</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="7000 руб." data-discount="700 руб." data-oldprice="7700 руб." data-id="89" class="b-catalog-detail__sizes-item">
+                    <div>51</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="7100 руб." data-discount="710 руб." data-oldprice="7810 руб." data-id="90" class="b-catalog-detail__sizes-item">
+                    <div>53</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="7200 руб." data-discount="720 руб." data-oldprice="7920 руб." data-id="91" class="b-catalog-detail__sizes-item">
+                    <div>55</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="7300 руб." data-discount="730 руб." data-oldprice="8030 руб." data-id="92" class="b-catalog-detail__sizes-item">
+                    <div>57</div>
+                    <div>176-182</div>
+                  </div>
+                  <div data-price="7400 руб." data-discount="740 руб." data-oldprice="8140 руб." data-id="93" class="b-catalog-detail__sizes-item">
+                    <div>59</div>
+                    <div>176-182</div>
+                  </div>
+                </div>
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="7500 руб." data-discount="750 руб." data-oldprice="8250 руб." data-id="94" class="b-catalog-detail__sizes-item">
+                    <div>37</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="7600 руб." data-discount="760 руб." data-oldprice="8360 руб." data-id="95" class="b-catalog-detail__sizes-item">
+                    <div>39</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="7700 руб." data-discount="770 руб." data-oldprice="8470 руб." data-id="96" class="b-catalog-detail__sizes-item">
+                    <div>41</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="7800 руб." data-discount="780 руб." data-oldprice="8580 руб." data-id="97" class="b-catalog-detail__sizes-item">
+                    <div>43</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="7900 руб." data-discount="790 руб." data-oldprice="8690 руб." data-id="98" class="b-catalog-detail__sizes-item">
+                    <div>45</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="8000 руб." data-discount="800 руб." data-oldprice="8800 руб." data-id="99" class="b-catalog-detail__sizes-item">
+                    <div>47</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="8100 руб." data-discount="810 руб." data-oldprice="8910 руб." data-id="100" class="b-catalog-detail__sizes-item">
+                    <div>49</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="8200 руб." data-discount="820 руб." data-oldprice="9020 руб." data-id="101" class="b-catalog-detail__sizes-item">
+                    <div>51</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="8300 руб." data-discount="830 руб." data-oldprice="9130 руб." data-id="102" class="b-catalog-detail__sizes-item">
+                    <div>53</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="8400 руб." data-discount="840 руб." data-oldprice="9240 руб." data-id="103" class="b-catalog-detail__sizes-item">
+                    <div>55</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="8500 руб." data-discount="850 руб." data-oldprice="9350 руб." data-id="104" class="b-catalog-detail__sizes-item">
+                    <div>57</div>
+                    <div>182-188</div>
+                  </div>
+                  <div data-price="8600 руб." data-discount="860 руб." data-oldprice="9460 руб." data-id="105" class="b-catalog-detail__sizes-item">
+                    <div>59</div>
+                    <div>182-188</div>
+                  </div>
+                </div>
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="8700 руб." data-discount="870 руб." data-oldprice="9570 руб." data-id="106" class="b-catalog-detail__sizes-item">
+                    <div>37</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="8800 руб." data-discount="880 руб." data-oldprice="9680 руб." data-id="107" class="b-catalog-detail__sizes-item">
+                    <div>39</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="8900 руб." data-discount="890 руб." data-oldprice="9790 руб." data-id="108" class="b-catalog-detail__sizes-item">
+                    <div>41</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9000 руб." data-discount="900 руб." data-oldprice="9900 руб." data-id="109" class="b-catalog-detail__sizes-item">
+                    <div>43</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9100 руб." data-discount="910 руб." data-oldprice="10010 руб." data-id="110" class="b-catalog-detail__sizes-item">
+                    <div>45</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9200 руб." data-discount="920 руб." data-oldprice="10120 руб." data-id="111" class="b-catalog-detail__sizes-item">
+                    <div>47</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9300 руб." data-discount="930 руб." data-oldprice="10230 руб." data-id="112" class="b-catalog-detail__sizes-item">
+                    <div>49</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9400 руб." data-discount="940 руб." data-oldprice="10340 руб." data-id="113" class="b-catalog-detail__sizes-item">
+                    <div>51</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9500 руб." data-discount="950 руб." data-oldprice="10450 руб." data-id="114" class="b-catalog-detail__sizes-item">
+                    <div>53</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9600 руб." data-discount="960 руб." data-oldprice="10560 руб." data-id="115" class="b-catalog-detail__sizes-item">
+                    <div>55</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9700 руб." data-discount="970 руб." data-oldprice="10670 руб." data-id="116" class="b-catalog-detail__sizes-item">
+                    <div>57</div>
+                    <div>188-194</div>
+                  </div>
+                  <div data-price="9800 руб." data-discount="980 руб." data-oldprice="10780 руб." data-id="117" class="b-catalog-detail__sizes-item">
+                    <div>59</div>
+                    <div>188-194</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." class="b-catalog-detail__info i-3">
+              <div class="row">
+                <div class="col-xs-3 b-catalog-detail__old-price">
+                  <h5>Старая цена</h5>
+                  <s>14 257 руб.</s>
+                </div>
+                <div class="col-xs-3 b-catalog-detail__discount">
+                  <h5>Выгода</h5><span>1 300 руб.</span>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <div class="b-catalog-detail__price i-sale">1 300 руб.</div>
+                </div>
+              </div>
+              <hr class="i-size-M i-line">
+              <div class="b-catalog-detail__sizes">
+                <div class="b-catalog-detail__sizes-row">
+                  <div data-price="1000 руб." data-discount="500 руб." data-oldprice="1500 руб." data-id="118" class="b-catalog-detail__sizes-item">XS</div>
+                  <div data-price="2000 руб." data-discount="600 руб." data-oldprice="2600 руб." data-id="119" class="b-catalog-detail__sizes-item">S</div>
+                  <div data-price="3000 руб." data-discount="700 руб." data-oldprice="3700 руб." data-id="120" class="b-catalog-detail__sizes-item">M</div>
+                  <div data-price="4000 руб." data-discount="800 руб." data-oldprice="4800 руб." data-id="121" class="b-catalog-detail__sizes-item">L</div>
+                  <div data-price="5000 руб." data-discount="900 руб." data-oldprice="5900 руб." data-id="122" class="b-catalog-detail__sizes-item">XL</div>
+                  <div data-price="6000 руб." data-discount="1000 руб." data-oldprice="7000 руб." data-id="123" class="b-catalog-detail__sizes-item">XXL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end /components/catalog.detail/-->
+      </div>
+    </section>
+    <footer class="b-footer">
+      <div class="b-container">
+        <div class="b-row">
+          <div class="b-col-sm-4"></div>
+          <div class="b-col-sm-4"></div>
+          <div class="b-col-sm-4"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

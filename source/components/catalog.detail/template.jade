@@ -1,0 +1,153 @@
+﻿// start /components/catalog.detail/
+
+link( rel="stylesheet", href="/components/catalog.detail/style.css" )
+script( src="/components/catalog.detail/script.js" )
+
+h1.i-small Мужское зимнее шерстяное пальто VENTUNO BLACK черно-серого цвета
+  
+.row
+
+  .col-sm-6
+  
+    include ../../modules/gallery/fotorama
+    include ../../modules/gallery/include
+  
+  .col-sm-6
+  
+    - var id = 10
+  
+    //Минимальная цена указывается в самом диве. Показывается если ничего не выбрано
+    .b-catalog-detail__info.i-1( data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." )
+      
+      .row
+      
+        .col-xs-3.b-catalog-detail__old-price
+          h5 Старая цена
+          s 14 257 руб.
+            
+        .col-xs-3.b-catalog-detail__discount
+          h5 Выгода
+          span 1 300 руб.
+            
+        .col-xs-6.text-right
+          .b-catalog-detail__price.i-sale 1 300 руб.
+          
+      hr.i-size-M.i-line
+      
+      .b-catalog-detail__sizes
+        
+        - var i = 0
+        - var j = 0
+        - var k = 44
+        - var l = 164
+        - var price = 1300
+        - var discount = 100
+          
+          while j < 6
+            - j++
+            - i = 0
+            - k = 44
+        
+            .b-catalog-detail__sizes-row
+            
+              while i < 10
+                - i++
+                - price += 100
+                - discount += 10
+                
+                .b-catalog-detail__sizes-item( data-price="#{price} руб." data-discount="#{discount} руб." data-oldprice="#{price+discount} руб." data-id="#{id++}" )
+                  div=k
+                    - k = k + 2
+                  div=l
+                  
+            - l = l + 6
+            
+      hr
+      
+      .row
+        .col-sm-6
+          .b-catalog-detail__order Вы выбрали
+            | 
+            span.b-catalog-detail__order-num 9 размеров
+          
+        .col-sm-6
+          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" ) Добавить в корзину
+            
+    hr
+  
+    .b-catalog-detail__info.i-2( data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." )
+      
+      .row
+      
+        .col-xs-3.b-catalog-detail__old-price
+          h5 Старая цена
+          s 14 257 руб.
+            
+        .col-xs-3.b-catalog-detail__discount
+          h5 Выгода
+          span 1 300 руб.
+            
+        .col-xs-6.text-right
+          .b-catalog-detail__price 1 300 руб.
+          
+      hr.i-size-M.i-line
+      
+      .b-catalog-detail__sizes
+        
+        - var i = 0
+        - var j = 0
+        - var k = 37
+        - var l = 170
+        - var price = 5000
+        - var discount = 500
+          
+          while j < 4
+            - j++
+            - i = 0
+            - k = 37
+        
+            .b-catalog-detail__sizes-row
+            
+              while i < 12
+                - i++
+                - price += 100
+                - discount += 10
+                
+                .b-catalog-detail__sizes-item( data-price="#{price} руб." data-discount="#{discount} руб." data-oldprice="#{price+discount} руб." data-id="#{id++}" )
+                  div=k
+                    - k = k + 2
+                  div #{l}-#{l+6}
+                  
+            - l = l + 6
+            
+    hr
+  
+    .b-catalog-detail__info.i-3( data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." )
+      
+      .row
+      
+        .col-xs-3.b-catalog-detail__old-price
+          h5 Старая цена
+          s 14 257 руб.
+            
+        .col-xs-3.b-catalog-detail__discount
+          h5 Выгода
+          span 1 300 руб.
+            
+        .col-xs-6.text-right
+          .b-catalog-detail__price.i-sale 1 300 руб.
+          
+      hr.i-size-M.i-line
+      
+      .b-catalog-detail__sizes
+      
+        .b-catalog-detail__sizes-row
+        
+          .b-catalog-detail__sizes-item( data-price="1000 руб." data-discount="500 руб." data-oldprice="1500 руб." data-id="#{id++}" ) XS
+          .b-catalog-detail__sizes-item( data-price="2000 руб." data-discount="600 руб." data-oldprice="2600 руб." data-id="#{id++}" ) S
+          .b-catalog-detail__sizes-item( data-price="3000 руб." data-discount="700 руб." data-oldprice="3700 руб." data-id="#{id++}" ) M
+          .b-catalog-detail__sizes-item( data-price="4000 руб." data-discount="800 руб." data-oldprice="4800 руб." data-id="#{id++}" ) L
+          .b-catalog-detail__sizes-item( data-price="5000 руб." data-discount="900 руб." data-oldprice="5900 руб." data-id="#{id++}" ) XL
+          .b-catalog-detail__sizes-item( data-price="6000 руб." data-discount="1000 руб." data-oldprice="7000 руб." data-id="#{id++}" ) XXL
+
+// end /components/catalog.detail/
