@@ -1,0 +1,58 @@
+.collapsing-block h3:first-child
+  font-size: 14px
+  cursor: pointer
+  padding-top: 15px
+  padding-bottom: 15px
+  margin-top: 0
+  margin-bottom: 0
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.collapsing-content
+  overflow: hidden
+  max-height: 1000px
+  transition( all 0.3s ease-in )
+
+.collapsing-content .inner
+  padding-bottom: 20px
+
+.collapsing-content .inner::after
+  clear: both
+  content: ""
+  display: table
+
+.collapsing-block
+  border-bottom: 1px #cbcbcb solid
+
+.collapsing-block:first-child
+  border-top: 1px #cbcbcb solid
+
+.collapsing-block h3:first-child:before
+  content: ''
+  position: absolute
+  width: 23px
+  height: 23px
+  background-color: #f2f2f2
+  background-image: url("data:image/png;base64,R0lGODlhCQAJAIABAP///////yH5BAEAAAEALAAAAAAJAAkAAAIKjI+py+D/mJyyAAA7")
+  background-position: center center
+  background-repeat: no-repeat
+  top: 12px
+  right: 0
+  transition( all 0.5s ease )
+  transform( rotate(180deg))
+  border-radius: 50%
+
+.collapsing-block.closed .collapsing-content
+  max-height: 0
+  transition( all 0.4s ease-out )
+
+.collapsing-block.closed h3:first-child:before
+  background-color: #006eb9
+  background-image: url("data:image/png;base64,R0lGODlhCQAJAIABAP///////yH5BAEAAAEALAAAAAAJAAkAAAIPjAOnuJfNHJh0qtfw0lcVADs=")
+  background-position: center center
+  background-repeat: no-repeat
+  transform( rotate(0))
+
+

@@ -120,6 +120,17 @@ h1.i-small Мужское зимнее шерстяное пальто VENTUNO B
                   
             - l = l + 6
             
+      hr
+      
+      .row
+        .col-sm-6
+          .b-catalog-detail__order Вы выбрали
+            | 
+            span.b-catalog-detail__order-num 9 размеров
+          
+        .col-sm-6
+          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" ) Добавить в корзину
+            
     hr
   
     .b-catalog-detail__info.i-3( data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." )
@@ -143,11 +154,71 @@ h1.i-small Мужское зимнее шерстяное пальто VENTUNO B
       
         .b-catalog-detail__sizes-row
         
+          .b-catalog-detail__sizes-item( data-price="1000 руб." data-discount="500 руб." data-oldprice="1500 руб." data-id="#{id++}" ) XXS
           .b-catalog-detail__sizes-item( data-price="1000 руб." data-discount="500 руб." data-oldprice="1500 руб." data-id="#{id++}" ) XS
           .b-catalog-detail__sizes-item( data-price="2000 руб." data-discount="600 руб." data-oldprice="2600 руб." data-id="#{id++}" ) S
           .b-catalog-detail__sizes-item( data-price="3000 руб." data-discount="700 руб." data-oldprice="3700 руб." data-id="#{id++}" ) M
           .b-catalog-detail__sizes-item( data-price="4000 руб." data-discount="800 руб." data-oldprice="4800 руб." data-id="#{id++}" ) L
           .b-catalog-detail__sizes-item( data-price="5000 руб." data-discount="900 руб." data-oldprice="5900 руб." data-id="#{id++}" ) XL
           .b-catalog-detail__sizes-item( data-price="6000 руб." data-discount="1000 руб." data-oldprice="7000 руб." data-id="#{id++}" ) XXL
+          .b-catalog-detail__sizes-item( data-price="6000 руб." data-discount="1000 руб." data-oldprice="7000 руб." data-id="#{id++}" ) XXXL
+            
+      hr
+      
+      .row
+        .col-sm-6
+          .b-catalog-detail__order Вы выбрали
+            | 
+            span.b-catalog-detail__order-num 9 размеров
+          
+        .col-sm-6
+          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" ) Добавить в корзину
+          
+    hr
+          
+    .item-details-accordeon
+    
+      .collapsing-block
+        .h3(style='padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;') Описание
+        .collapsing-content
+          .inner
+            p Мужской полуприлегающий костюм PIZANO синего цвета Classic fit ABSOLUTEX
+      .collapsing-block.closed
+        .h3(style='padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;') Детали
+        .collapsing-content
+          .inner
+            | Артикул: 1321* M PIZANO
+            br
+            | 			Состав: 30%шерсть, 50%вискоза, 20% полиэстер
+            br
+            | 									Сезон: Мультисезон
+            br
+            | 			Страна производитель: РОССИЯ
+            br
+      .collapsing-block.closed
+        .h3(style='padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;') Силуэт
+        .collapsing-content
+          .inner
+            hr
+            .row
+              .col-sm-4
+                img(src='/upload/iblock/a38/a38787fb79bf3a052425d3b79813f860.jpg', alt='Силуэт', width='144')
+              .col-sm-6
+                | Полуприлегающий силуэт (Classic fit)
+                br
+                |  Это силуэт вещей, которые не очень плотно сидят на фигуре, скрывая некоторые недостатки, но в то же время такой силуэт нельзя назвать просторным. Такой силуэт подходит для большинства типов фигур.
+                br
+      .collapsing-block.closed
+        .h3(style='padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;') Доставка и возврат
+        .collapsing-content
+          .inner
+            p
+              | Ознакомьтесь, пожалуйста, 
+              a(href='/about/delivery/') с условиями доставки.
+            p
+              | Если вещь по каким-то причинам не подошла Вам, мы без проблем обменяем ее на нужный размер или вернем деньги в установленный законом срок. Обмен и возврат возможны, только если вещь не была в употреблении, сохранены товарный вид (а также ярлыки, этикетки, упаковка) и чек. 
+              a(href='/about/delivery/vozvrat.php') Подробнее об обмене и возврате.
+              
+hr
 
 // end /components/catalog.detail/

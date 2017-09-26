@@ -91,6 +91,12 @@
         }
       });
     });
+
+    //collapse detailed info blocks
+    $('.item-details-accordeon .collapsing-block').not(':first').addClass('closed');
+    $('.item-details-accordeon .collapsing-block').on('click', '.h3', function() {
+      $(this).parent('.collapsing-block').toggleClass('closed');
+    });
   
     /*if ( window.BX ) {
       BX.addCustomEvent( "onFrameDataReceived", function () {});

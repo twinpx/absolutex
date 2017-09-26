@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/template/template_styles.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&amp;subset=latin,cyrillic" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400&amp;subset=latin,cyrillic" rel="stylesheet">
-    <script src="/template/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/template/jscript.js"></script>
   </head>
   <body>
@@ -773,6 +774,16 @@
                   </div>
                 </div>
               </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="b-catalog-detail__order">
+                    Вы выбрали
+                     <span class="b-catalog-detail__order-num">9 размеров</span>
+                  </div>
+                </div>
+                <div class="col-sm-6"><a href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" class="btn btn-default btn-size-L bj-cart-button btn-100 i-disabled">Добавить в корзину</a></div>
+              </div>
             </div>
             <hr>
             <div data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." class="b-catalog-detail__info i-3">
@@ -791,17 +802,68 @@
               <hr class="i-size-M i-line">
               <div class="b-catalog-detail__sizes">
                 <div class="b-catalog-detail__sizes-row">
-                  <div data-price="1000 руб." data-discount="500 руб." data-oldprice="1500 руб." data-id="118" class="b-catalog-detail__sizes-item">XS</div>
-                  <div data-price="2000 руб." data-discount="600 руб." data-oldprice="2600 руб." data-id="119" class="b-catalog-detail__sizes-item">S</div>
-                  <div data-price="3000 руб." data-discount="700 руб." data-oldprice="3700 руб." data-id="120" class="b-catalog-detail__sizes-item">M</div>
-                  <div data-price="4000 руб." data-discount="800 руб." data-oldprice="4800 руб." data-id="121" class="b-catalog-detail__sizes-item">L</div>
-                  <div data-price="5000 руб." data-discount="900 руб." data-oldprice="5900 руб." data-id="122" class="b-catalog-detail__sizes-item">XL</div>
-                  <div data-price="6000 руб." data-discount="1000 руб." data-oldprice="7000 руб." data-id="123" class="b-catalog-detail__sizes-item">XXL</div>
+                  <div data-price="1000 руб." data-discount="500 руб." data-oldprice="1500 руб." data-id="118" class="b-catalog-detail__sizes-item">XXS</div>
+                  <div data-price="1000 руб." data-discount="500 руб." data-oldprice="1500 руб." data-id="119" class="b-catalog-detail__sizes-item">XS</div>
+                  <div data-price="2000 руб." data-discount="600 руб." data-oldprice="2600 руб." data-id="120" class="b-catalog-detail__sizes-item">S</div>
+                  <div data-price="3000 руб." data-discount="700 руб." data-oldprice="3700 руб." data-id="121" class="b-catalog-detail__sizes-item">M</div>
+                  <div data-price="4000 руб." data-discount="800 руб." data-oldprice="4800 руб." data-id="122" class="b-catalog-detail__sizes-item">L</div>
+                  <div data-price="5000 руб." data-discount="900 руб." data-oldprice="5900 руб." data-id="123" class="b-catalog-detail__sizes-item">XL</div>
+                  <div data-price="6000 руб." data-discount="1000 руб." data-oldprice="7000 руб." data-id="124" class="b-catalog-detail__sizes-item">XXL</div>
+                  <div data-price="6000 руб." data-discount="1000 руб." data-oldprice="7000 руб." data-id="125" class="b-catalog-detail__sizes-item">XXXL</div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="b-catalog-detail__order">
+                    Вы выбрали
+                     <span class="b-catalog-detail__order-num">9 размеров</span>
+                  </div>
+                </div>
+                <div class="col-sm-6"><a href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" class="btn btn-default btn-size-L bj-cart-button btn-100 i-disabled">Добавить в корзину</a></div>
+              </div>
+            </div>
+            <hr>
+            <div class="item-details-accordeon">
+              <div class="collapsing-block">
+                <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Описание</div>
+                <div class="collapsing-content">
+                  <div class="inner">
+                    <p>Мужской полуприлегающий костюм PIZANO синего цвета Classic fit ABSOLUTEX</p>
+                  </div>
+                </div>
+              </div>
+              <div class="collapsing-block closed">
+                <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Детали</div>
+                <div class="collapsing-content">
+                  <div class="inner">Артикул: 1321* M PIZANO<br>			Состав: 30%шерсть, 50%вискоза, 20% полиэстер<br>									Сезон: Мультисезон<br>			Страна производитель: РОССИЯ<br></div>
+                </div>
+              </div>
+              <div class="collapsing-block closed">
+                <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Силуэт</div>
+                <div class="collapsing-content">
+                  <div class="inner">
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-4"><img src="/upload/iblock/a38/a38787fb79bf3a052425d3b79813f860.jpg" alt="Силуэт" width="144"></div>
+                      <div class="col-sm-6">Полуприлегающий силуэт (Classic fit)<br> Это силуэт вещей, которые не очень плотно сидят на фигуре, скрывая некоторые недостатки, но в то же время такой силуэт нельзя назвать просторным. Такой силуэт подходит для большинства типов фигур.<br></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collapsing-block closed">
+                <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Доставка и возврат</div>
+                <div class="collapsing-content">
+                  <div class="inner">
+                    <p>Ознакомьтесь, пожалуйста, <a href="/about/delivery/">с условиями доставки.</a></p>
+                    <p>Если вещь по каким-то причинам не подошла Вам, мы без проблем обменяем ее на нужный размер или вернем деньги в установленный законом срок. Обмен и возврат возможны, только если вещь не была в употреблении, сохранены товарный вид (а также ярлыки, этикетки, упаковка) и чек. <a href="/about/delivery/vozvrat.php">Подробнее об обмене и возврате.</a></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <hr>
         <!-- end /components/catalog.detail/-->
       </div>
     </section>
