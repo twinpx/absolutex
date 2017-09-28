@@ -71,8 +71,23 @@ h1.i-small Мужское зимнее шерстяное пальто VENTUNO B
             span.b-catalog-detail__order-num 9 размеров
           
         .col-sm-6
-          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" ) Добавить в корзину
-            
+          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" data-toggle="modal" data-target="#cartModal" ) Добавить в корзину
+          
+          #cartModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='cartModalLabel')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  button.close( type='button', data-dismiss='modal', aria-label='Close' )
+                  h4#cartModalLabel.modal-title Вы выбрали
+                    | 
+                    span#cartModalLabelNum 9 размеров
+                  
+                .modal-footer.popup-window-buttons
+                  span.bx_item_detail.bx_blue
+                    span.bx_medium.bx_bt_button( style='margin-right: 10px;', data-dismiss='modal') Продолжить выбор
+                  span.bx_item_detail.bx_blue
+                    a.bx_medium.bx_bt_button( href="/cart/" ) Перейти в корзину
+                            
     hr
   
     .b-catalog-detail__info.i-2( data-price="1 300 руб." data-discount="1 300 руб." data-oldprice="14 257 руб." )
@@ -129,7 +144,7 @@ h1.i-small Мужское зимнее шерстяное пальто VENTUNO B
             span.b-catalog-detail__order-num 9 размеров
           
         .col-sm-6
-          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" ) Добавить в корзину
+          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" data-toggle="modal" data-target="#cartModal" ) Добавить в корзину
             
     hr
   
@@ -172,7 +187,7 @@ h1.i-small Мужское зимнее шерстяное пальто VENTUNO B
             span.b-catalog-detail__order-num 9 размеров
           
         .col-sm-6
-          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" ) Добавить в корзину
+          a.btn.btn-default.btn-size-L.bj-cart-button.btn-100.i-disabled( href="" data-ajax-url="/components/catalog.detail/response.json" data-ajax-method="GET" data-toggle="modal" data-target="#cartModal" ) Добавить в корзину
           
     hr
           

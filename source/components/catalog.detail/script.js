@@ -75,10 +75,15 @@
         data: data,
         success: function(data) {
           if ( data.STATUS && data.STATUS === 'OK' ) {
-          
+            
+            //set num for the cart icon
             if ( data.NUM ) {
               $( '#bx_cart_num' ).text( data.NUM );
             }
+            
+            //show the dialog window
+            var l = $button.closest( '.b-catalog-detail__info' ).find( '.i-active' ).length;
+            $( '#cartModalLabelNum' ).text( l + ' ' + sizeWord( l ));
             
           }
         },
