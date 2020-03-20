@@ -1,7 +1,53 @@
 extends ./layouts/main.jade
 
 block title
-  title Main page | absolutex
+  title Main page | seller
 
 block content
-  h1 absolutex main page
+
+  .container-fluid
+    
+    hr.i-size-L
+    hr.i-size-L
+    hr.i-size-L
+    
+    h1 Seller
+    
+    h2 Каталог
+    ul
+      li
+        a( href="/catalog/" ) Catalog
+      li
+        a( href="/catalog/detail/" ) Catalog detail
+        
+    h2 Другие страницы
+    ul
+      li
+        a( href="/lookbook/" ) Lookbook
+      li
+        a( href="/personal/cart/" ) Моя корзина
+      li
+        a( href="/personal/cart-compact/" ) Моя корзина (compact version)
+      li
+        a( href="/instagram/" ) Instagram
+      li
+        a( href="/shops/" ) Магазины
+      li
+        a( href="/shops/shop-detail/" ) Магазин детально
+      li
+        a( href="/actions/" ) Акции
+        
+    h2 Блоки
+    ul
+      li
+        a( href="/blocks/catalogue-tabs/" ) Вкладки с товарами (components/catalogue-tabs/)
+      li
+        a( href="/blocks/banners/" ) Баннеры на главной
+        
+    h2 Формы
+    ul
+      li
+        a( href="/forms/auth/" ) Авторизация
+      li
+        a( href="/forms/reg/" ) Регистрация
+        

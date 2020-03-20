@@ -80,7 +80,7 @@ module.exports = function( grunt ) {
       },
       prod: {
         options: {
-          compress: true
+          compress: {}
         },
         files: [
           {
@@ -105,7 +105,7 @@ module.exports = function( grunt ) {
     concat: {
       js: {
         files: {
-          '<%= source %>js/jscript.js': [
+          '<%= source %>js/script.js': [
             '<%= source %>js/src/top.js',
             '<%= source %>js/main.js',
             '<%= source %>modules/**/*.js',
@@ -115,8 +115,8 @@ module.exports = function( grunt ) {
       },
       pluginsJS: {
         files: {
-          '<%= source %>js/jscript.js': [
-            '<%= source %>js/jscript.js',
+          '<%= source %>js/script.js': [
+            '<%= source %>js/script.js',
             '<%= source %>js/src/plugins/**/*.js',
           ]
         }
@@ -129,9 +129,21 @@ module.exports = function( grunt ) {
           ]
         }
       },
+      LESS:  {
+        files: {
+          '<%= dest %>template/colors.less': [
+            '<%= source %>styl/colors/colors.less',
+            '<%= source %>styl/colors/bootstrap.less',
+            '<%= source %>styl/colors/headers.less',
+            '<%= source %>styl/colors/template_styles.less',
+            '<%= source %>styl/colors/components.less',
+            '<%= source %>styl/colors/absolutex.less'
+          ]
+        }
+      },
       prod: {
         files: {
-          '<%= temp %>template/jscript.js': [
+          '<%= temp %>template/script.js': [
             '<%= source %>js/src/top.js',
             '<%= source %>js/main.js',
             '<%= source %>modules/**/*.js',
@@ -141,8 +153,8 @@ module.exports = function( grunt ) {
       },
       prodPluginsJS: {
         files: {
-          '<%= temp %>template/jscript.js': [
-            '<%= temp %>template/jscript.js',
+          '<%= temp %>template/script.js': [
+            '<%= temp %>template/script.js',
             '<%= source %>js/src/plugins/**/*.js',
           ]
         }
@@ -152,6 +164,18 @@ module.exports = function( grunt ) {
           '<%= temp %>template/template_styles.css': [
             '<%= temp %>template/template_styles.css',
             '<%= source %>js/src/plugins/**/*.css'
+          ]
+        }
+      },
+      prodLESS: {
+        files: {
+          '<%= temp %>template/colors.less': [
+            '<%= source %>styl/colors/colors.less',
+            '<%= source %>styl/colors/bootstrap.less',
+            '<%= source %>styl/colors/headers.less',
+            '<%= source %>styl/colors/template_styles.less',
+            '<%= source %>styl/colors/components.less',
+            '<%= source %>styl/colors/absolutex.less'
           ]
         }
       }
@@ -208,7 +232,7 @@ module.exports = function( grunt ) {
         },
         files: [
           {
-            '<%= dest%>template/jscript.js': '<%= source %>js/jscript.js'
+            '<%= dest%>template/script.js': '<%= source %>js/script.js'
           }
         ]
       },
@@ -231,20 +255,35 @@ module.exports = function( grunt ) {
       },
       prodTemplate: {
         options: {
+          mangle: false,
+          compress: false,
+          beautify: true,
+          preserveComments: 'some'
+        },
+        files: [
+          {
+            '<%= temp %>template/script.js': '<%= temp %>template/script.js'
+          }
+        ]
+      },
+      prodMinTemplate: {
+        options: {
           mangle: true,
           compress: {},
           preserveComments: 'some'
         },
         files: [
           {
-            '<%= temp %>template/jscript.js': '<%= temp %>template/jscript.js'
+            '<%= temp %>template/script.js': '<%= temp %>template/script.min.js'
           }
         ]
       },
       prodComponents: {
         options: {
-          mangle: true,
-          compress: {}
+          mangle: false,
+          compress: false,
+          beautify: true,
+          preserveComments: 'some'
         },
         files: [
           {
@@ -256,15 +295,31 @@ module.exports = function( grunt ) {
             extDot: 'first'
           }
         ]
+      },
+      prodMinComponents: {
+        options: {
+          mangle: true,
+          compress: {}
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= source %>components/',
+            src: '**/*.js',
+            dest: '<%= temp %>components/',
+            ext: '.min.js',
+            extDot: 'first'
+          }
+        ]
       }
     },
     
     clean: {
       js: {
-        src: [ '<%= source %>js/jscript.js' ]
+        src: [ '<%= source %>js/script.js' ]
       },
       images: {
-        src: [ '<%= dest %>template/images/' ]
+        src: [ '<%= dest %>images/' ]
       },
       temp: {
         src: [ '<%= temp %>' ]
@@ -278,7 +333,7 @@ module.exports = function( grunt ) {
             expand: true,
             cwd: '<%= source %>images/',
             src: [ '**/*.*' ],
-            dest: '<%= dest %>template/images/'
+            dest: '<%= dest %>images/'
           }
         ]
       },
@@ -298,7 +353,7 @@ module.exports = function( grunt ) {
             expand: true,
             cwd: '<%= source %>images/',
             src: [ '**/*.*' ],
-            dest: '<%= temp %>template/images/'
+            dest: '<%= temp %>images/'
           }
         ]
       },
@@ -319,6 +374,16 @@ module.exports = function( grunt ) {
             cwd: '<%= source %>components/',
             src: [ '**/*.js' ],
             dest: '<%= temp %>components/'
+          }
+        ]
+      },
+      prodLESS: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= temp %>template/',
+            src: [ 'colors.less' ],
+            dest: '<%= prod %>template/'
           }
         ]
       },
@@ -355,7 +420,7 @@ module.exports = function( grunt ) {
       js: {
         files: [
           '<%= source %>**/*.js',
-          '!<%= source %>js/jscript.js'
+          '!<%= source %>js/script.js'
         ],
         tasks: [ 'js' ]
       },
@@ -389,22 +454,27 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-clean' );
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   
-  grunt.registerTask( 'css', [ 'stylus:template', 'stylus:components', 'concat:pluginsCSS' ] );
-  grunt.registerTask( 'js', [ 'concat:js', 'jshint:dev', 'concat:pluginsJS', 'uglify:devTemplate', 'uglify:devComponents', 'clean:js' ] );
+  grunt.registerTask( 'css', [ 'stylus:template', 'stylus:components', /*'less:prod',*/ 'concat:pluginsCSS' ]);
+  grunt.registerTask( 'js', [ 'concat:js'/*, 'jshint:dev'*/, 'concat:pluginsJS', 'uglify:devTemplate', 'uglify:devComponents', 'clean:js' ] );
   grunt.registerTask( 'html', [ 'copy:images', 'jade:dev' ] );
+  grunt.registerTask( 'less', [ 'concat:LESS', 'concat:prodLESS', 'copy:prodLESS' ] );
   grunt.registerTask( 'default', [ 'connect', 'css', 'js', 'html', 'watch' ] );
   
   grunt.registerTask( 'prod', [
     'stylus:prod',
+    //'less:prod',
     'concat:prodPluginsCSS',
+    'concat:prodLESS',
     'jade:prod',
     //js
     'concat:prod',
     'copy:prodComponents',
-    'jshint:prod',
+    //'jshint:prod',
     'uglify:prodTemplate',
+    'uglify:prodMinTemplate',
     'concat:prodPluginsJS',
     'uglify:prodComponents',
+    'uglify:prodMinComponents',
     //images
     'clean:images',
     'copy:tempImages',
@@ -415,3 +485,7 @@ module.exports = function( grunt ) {
   ]);
   
 };
+
+/*grunt less*/
+/* lessc ../dest/template/colors.less ../dest/template/colors.css */
+/* lessc ../dest/template/colors.less ../markup/template/colors.css */

@@ -3,13 +3,35 @@
   'use strict';
   
   $( function() {
+    
+    //sticky gallery
+    setTimeout( function() {
+      if ( $( window ).height() > $( '.b-catalog-detail__gallery' ).outerHeight() + 20 ) {
+        $( '.b-catalog-detail__gallery' ).addClass( 'i-sticky' );
+      }
+    }, 2000);
+    
+    //gallery
+    if ( window.matchMedia( '(min-width: 1024px)' ).matches ) {
+      //$( '.b-catalog-element-gallery__main-img' ).imagezoomsl();
+    }        
+
+    $( '.b-catalog-element-gallery__thumbs-img' ).click(function() {
+        var $img = $( this );
+        $img.parent().find( '.i-active' ).removeClass( 'i-active' );
+        $img.addClass( 'i-active' );
+        $( '.b-catalog-element-gallery__main-img' ).fadeOut( 300, function() {
+          $( this ).attr( 'src', $img.data( 'src' )).attr( 'data-large', $img.data( 'large' )).fadeIn( 300 );
+        });
+    });
   
     $( '.b-catalog-detail__info' ).each( function() {
       
       var $info = $( this );
-      var $oldPrice = $info.find( '.b-catalog-detail__old-price' );
-      var $discount = $info.find( '.b-catalog-detail__discount' );
-      var $price = $info.find( '.b-catalog-detail__price' );
+      var $price1 = $info.find( '.b-catalog-detail__price[data-price=1]' );
+      var $price2 = $info.find( '.b-catalog-detail__price[data-price=2]' );
+      var $price3 = $info.find( '.b-catalog-detail__price[data-price=3]' );
+      var $price4 = $info.find( '.b-catalog-detail__price[data-price=4]' );
       var $order = $info.find( '.b-catalog-detail__order' );
       var $orderNum = $order.find( '.b-catalog-detail__order-num' );
       var $button = $info.find( '.bj-cart-button' );
@@ -23,18 +45,20 @@
         
         //set price
         if ( $item.hasClass( 'i-active' )) {
-          $oldPrice.find( 's' ).text( $item.data( 'oldprice' ));
-          $discount.find( 'span' ).text( $item.data( 'discount' ));
-          $price.text( $item.data( 'price' ));
+          $price1.text( $item.data( 'price-1' ));
+          $price2.text( $item.data( 'price-2' ));
+          $price3.text( $item.data( 'price-3' ));
+          $price4.text( $item.data( 'price-4' ));
         }
         
         var l = $info.find( '.i-active' ).length;
         
         //set default price
         if ( !l ) {
-          $oldPrice.find( 's' ).text( $info.data( 'oldprice' ));
-          $discount.find( 'span' ).text( $info.data( 'discount' ));
-          $price.text( $info.data( 'price' ));
+          $price1.text( $info.data( 'price-1' ));
+          $price2.text( $info.data( 'price-2' ));
+          $price3.text( $info.data( 'price-3' ));
+          $price4.text( $info.data( 'price-4' ));
           //hide num
           $order.hide();
           //hide button
@@ -59,6 +83,7 @@
       var url = $button.data( 'ajax-url' );
       var data = {};
       data.id = [];
+      data.price = $( '.b-catalog-detail__prices :radio:checked' ).val();
       
       if ( $button.hasClass( 'i-disabled' )) {
         return;

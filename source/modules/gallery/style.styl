@@ -1,26 +1,53 @@
 @import '../../styl/component-include.styl'
 
-.b-gallery
-  background #000
-      
-  .container
-    @media ( max-width 767px )
-      padding 0
+.fotorama
 
-.b-gallery .fotorama
-  .row
-    margin 0
+  .fotorama__arr
+    width 53px
+    height 53px
+    background-size cover
     
-  .col-sm-7
-    padding 0
-    width 63.7%
+    @media (max-width: 767px)
+      width 30px
+      height 30px
     
-  .col-sm-5
-    padding 0
-    width 36.3%
+  .fotorama__arr--next
+    background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWFJREFUeNrcmTsOhCAURRlC43q0dW2Oa7N1PVoyWJjgRGYCct+Hl1BYSHLyuAdB4703OaPvex/GtG2byX0XPazJr/cxxnGchmEwkiobZlmW+QQKQxSQLXxPJFA2TNd1YoGKOrOu6y3Qvu+sMK/DAqUVdWOKoOYIVkVmLh2SIgX7dILUkuMAcjUm+ZLCuRfFzzo686tDoTukUngkgD9yIJeCRU3MIQULnp8UyKEm5pACtDPUUoAJgEMK1hAWWgqkMGgpOEoKtBTIO4OUAqkA0FKwhrlqSoEdpqYUHDdFTSmI6EzigKdzmSXuEvTBREq+WE2zAKroual9xknJyLHfRGbTAXMHErqh79usZtilCAB2QGvqpOm0hp0cBhl20sygw84hANIr2qbump3WsENhqMMOywxH2CEwkn7SNvW32WkNe7VlluoIJ0gRTCrsXEurhgDEgRQJgGNnRwpARNjv6iPAAHlbk7V21ZlYAAAAAElFTkSuQmCC") no-repeat center center
+    background-size cover
     
-  &__nav--dots &__nav__frame
-    width 25px !important
+  .fotorama__arr--prev
+    background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWlJREFUeNrcmsEKgzAQRK148Xv06rfZfJtXv0ePaVJSEFGKcXdmYyCIB5XH7IxrTOW9ryzNZVmqruvGMP3Va5vK0Oj7Ph7GMN9pXhq1VZBpmlyRMAeKuJz71FZB2rYtC2Zd10OQeZ6z7tdYUyQXhKbMmdnvgFBgNBRhKiNidipMNHtQRUURaADsSysAOI3n1CyzFwcj9Wa3ooya2WEwCLNDAgBldnVlkGZXhUGbXVsZqNlVYFhmFw8AptlFlWGbXQzGgtkllaGbXRKGbnYNmHFTdvSRm2ZuA/U9jxHNLrUsZVJZub1C7PGKC85Pec/cgvl1AMMwmOgAbsNsVKIDSX7P0ENBrGu2EApiZWYhFMRhmKGgAsMKBe0VTWgoqK6boUNBtczQoQCBQYUCDAYRCox/mmqhAP9zdhYKEh948DL7tyhyp+RoMBqhQN3UkHwiVnL07SZnHkq7N8qCkewUqJ4R7xSetBPwI8AAaqA5gj7kt+AAAAAASUVORK5CYII=") no-repeat center center
+    background-size cover
+    
+  &--fullscreen .fotorama__fullscreen-icon
+    width 32px
+    height 32px
+    background embedurl( 'img/close.svg' ) no-repeat center !important
+    background-size cover
+    top 20px
+    right 20px
+    
+    @media (max-width: 767px)
+      width 20px
+      height 20px
+    
+  .fotorama__thumb-border
+    border-color #2f3154
+    border-style none none solid
+    top 74px
+    background none
+    height 0 !important
+    width 65px !important
+    
+  .fotorama__nav--thumbs
+    padding-bottom 9px
+    
+  .fotorama__nav__frame--thumb
+    opacity .5
+    transition( opacity 0.3s linear )
+    
+    &.fotorama__active
+      opacity 1
     
   &__nav__frame.fotorama__active .fotorama__dot
     background-color #ffce00 !important
@@ -28,95 +55,9 @@
   &__nav-wrap
     position relative
     
-  &__nav--dots
-    position absolute !important
-    width 100% !important
-    bottom 0
-    height 90px
-    background rgba( 0,0,0,0.49 )
-    
-  &__dot
-    border-color #ffce00 !important
-    width 16px !important
-    height 16px !important
-    border-radius 8px !important
-    margin-top 26px
-    
-  &__nav--dots .fotorama__nav__frame
-    width 25px
-    
   &.i-mob
     .b-gallery-picture
       padding-top 90%
-
-.b-gallery-picture
-  display block
-  position relative
-  background-repeat no-repeat
-  background-position center top
-  background-size cover
-  
-  .col-sm-7 &
-    padding-top 80.6%
-  
-  .col-sm-5 &
-    padding-top 64%
-  
-  .col-sm-5 &:first-of-type
-    padding-top 78%
-  
-  strong
-    display block
-    position absolute
-    top 50%
-    margin-top -10px
-    width 100%
-    color #fff
-    font-size 20pt
-    font-weight 400
-    padding-left 65px
-    
-.b-comments hr.i-size-L
-  @media ( max-width 1200px )
-    display none
-    
-section.i-blue
-
-  blockquote
-    display block
-    color #fff
-    font-size 23pt
-    font-weight 200
-    padding 0 200px
-    background embedurl( 'img/laquo.png' ) no-repeat left center, embedurl( 'img/raquo.png' ) no-repeat right center
-    background-size 15%
-    min-height 110px
-    
-    @media ( max-width 992px )
-      font-size 15pt
-      padding 0 150px
-    
-  .i-mob blockquote
-    background none
-    padding 0
-    font-size 17pt
-    
-  .fotorama__dot
-    width 14px
-    height 14px
-    top 12px
-    left 6px
-    border-radius 7px
-    background #bfd5da
-    border none
-    
-  .fotorama__nav--dots .fotorama__nav__frame
-    width 23px
-    
-  .fotorama__nav__frame.fotorama__active .fotorama__dot
-    background-color #ffcd00
-    width 14px
-    height 14px
     
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows
   .fotorama__fullscreen-icon:not(:focus),
@@ -133,20 +74,39 @@ section.i-blue
 .fotorama__nav:before,
 .fotorama__stage:before
   display none !important
-      
-.b-comments
   
-  @media( max-width: 767px ) and ( orientation: landscape )
-    &.hidden-xs
-      display block !important
-      
-      blockquote
-        padding 0
-        background none
-      
-      h3,
-      p
-        margin 8px 0
-      
-    &.visible-xs-block
-      display none !important
+.fotorama--fullscreen .fotorama__nav, .fotorama--fullscreen .fotorama__stage
+  background-color #fff !important
+  
+.fotorama--fullscreen .fotorama__nav-wrap,
+.fotorama__fullscreen-icon
+  display none
+  
+.fotorama--fullscreen .fotorama__fullscreen-icon
+  display block
+  
+.fotorama--fullscreen .fotorama__arr--prev
+  left 20px
+    
+  @media (max-width: 767px)
+    left 13px
+  
+.fotorama--fullscreen .fotorama__arr--next
+  right 20px
+    
+  @media (max-width: 767px)
+    right 13px
+    
+.fotorama--fullscreen .fotorama__html
+  display flex
+  align-items center
+  justify-content center
+  
+  img
+    max-height 100vh
+    max-width 100vw
+    
+.magnify-lens
+
+  @media (max-width: 767px)
+    display none !important

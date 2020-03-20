@@ -1,1 +1,103 @@
-!function(a){"use strict";function b(a){return/(10|11|12|13|14|15|16|17|18|19)$/.test(a)?"размеров":/.*1$/.test(a)?"размер":/[2-4]$/.test(a)?"размера":"размеров"}a(function(){a(".b-catalog-detail__info").each(function(){var c=a(this),d=c.find(".b-catalog-detail__old-price"),e=c.find(".b-catalog-detail__discount"),f=c.find(".b-catalog-detail__price"),g=c.find(".b-catalog-detail__order"),h=g.find(".b-catalog-detail__order-num"),i=c.find(".bj-cart-button");c.delegate(".b-catalog-detail__sizes-item:not( .i-disabled )","click",function(){var j=a(this);j.toggleClass("i-active"),j.hasClass("i-active")&&(d.find("s").text(j.data("oldprice")),e.find("span").text(j.data("discount")),f.text(j.data("price")));var k=c.find(".i-active").length;k?(g.show(),i.removeClass("i-disabled"),h.text(k+" "+b(k))):(d.find("s").text(c.data("oldprice")),e.find("span").text(c.data("discount")),f.text(c.data("price")),g.hide(),i.addClass("i-disabled"))})}),a(".bj-cart-button").click(function(c){c.preventDefault();var d=a(this),e=(d.data("ajax-url"),{});e.id=[],d.hasClass("i-disabled")||(d.closest(".b-catalog-detail__info").find(".i-active").each(function(){e.id.push(a(this).data("id"))}),a.ajax({url:d.data("ajax-url"),type:d.data("ajax-method"),dataType:"json",data:e,success:function(c){if(c.STATUS&&"OK"===c.STATUS){c.NUM&&a("#bx_cart_num").text(c.NUM);var e=d.closest(".b-catalog-detail__info").find(".i-active").length;a("#cartModalLabelNum").text(e+" "+b(e))}},error:function(a,b,c){window.console&&(console.log(a),console.log(b),console.log(c))}}))}),a(".item-details-accordeon .collapsing-block").not(":first").addClass("closed"),a(".item-details-accordeon .collapsing-block").on("click",".h3",function(){a(this).parent(".collapsing-block").toggleClass("closed")})})}(jQuery);
+(function($) {
+    "use strict";
+    $(function() {
+        setTimeout(function() {
+            if ($(window).height() > $(".b-catalog-detail__gallery").outerHeight() + 20) {
+                $(".b-catalog-detail__gallery").addClass("i-sticky");
+            }
+        }, 2e3);
+        if (window.matchMedia("(min-width: 1024px)").matches) {}
+        $(".b-catalog-element-gallery__thumbs-img").click(function() {
+            var $img = $(this);
+            $img.parent().find(".i-active").removeClass("i-active");
+            $img.addClass("i-active");
+            $(".b-catalog-element-gallery__main-img").fadeOut(300, function() {
+                $(this).attr("src", $img.data("src")).attr("data-large", $img.data("large")).fadeIn(300);
+            });
+        });
+        $(".b-catalog-detail__info").each(function() {
+            var $info = $(this);
+            var $price1 = $info.find(".b-catalog-detail__price[data-price=1]");
+            var $price2 = $info.find(".b-catalog-detail__price[data-price=2]");
+            var $price3 = $info.find(".b-catalog-detail__price[data-price=3]");
+            var $price4 = $info.find(".b-catalog-detail__price[data-price=4]");
+            var $order = $info.find(".b-catalog-detail__order");
+            var $orderNum = $order.find(".b-catalog-detail__order-num");
+            var $button = $info.find(".bj-cart-button");
+            $info.delegate(".b-catalog-detail__sizes-item:not( .i-disabled )", "click", function() {
+                var $item = $(this);
+                $item.toggleClass("i-active");
+                if ($item.hasClass("i-active")) {
+                    $price1.text($item.data("price-1"));
+                    $price2.text($item.data("price-2"));
+                    $price3.text($item.data("price-3"));
+                    $price4.text($item.data("price-4"));
+                }
+                var l = $info.find(".i-active").length;
+                if (!l) {
+                    $price1.text($info.data("price-1"));
+                    $price2.text($info.data("price-2"));
+                    $price3.text($info.data("price-3"));
+                    $price4.text($info.data("price-4"));
+                    $order.hide();
+                    $button.addClass("i-disabled");
+                } else {
+                    $order.show();
+                    $button.removeClass("i-disabled");
+                    $orderNum.text(l + " " + sizeWord(l));
+                }
+            });
+        });
+        $(".bj-cart-button").click(function(e) {
+            e.preventDefault();
+            var $button = $(this);
+            var url = $button.data("ajax-url");
+            var data = {};
+            data.id = [];
+            data.price = $(".b-catalog-detail__prices :radio:checked").val();
+            if ($button.hasClass("i-disabled")) {
+                return;
+            }
+            $button.closest(".b-catalog-detail__info").find(".i-active").each(function() {
+                data.id.push($(this).data("id"));
+            });
+            $.ajax({
+                url: $button.data("ajax-url"),
+                type: $button.data("ajax-method"),
+                dataType: "json",
+                data: data,
+                success: function(data) {
+                    if (data.STATUS && data.STATUS === "OK") {
+                        if (data.NUM) {
+                            $("#bx_cart_num").text(data.NUM);
+                        }
+                        var l = $button.closest(".b-catalog-detail__info").find(".i-active").length;
+                        $("#cartModalLabelNum").text(l + " " + sizeWord(l));
+                    }
+                },
+                error: function(a, b, c) {
+                    if (window.console) {
+                        console.log(a);
+                        console.log(b);
+                        console.log(c);
+                    }
+                }
+            });
+        });
+        $(".item-details-accordeon .collapsing-block").not(":first").addClass("closed");
+        $(".item-details-accordeon .collapsing-block").on("click", ".h3", function() {
+            $(this).parent(".collapsing-block").toggleClass("closed");
+        });
+    });
+    function sizeWord(num) {
+        if (/(10|11|12|13|14|15|16|17|18|19)$/.test(num)) {
+            return "размеров";
+        } else if (/.*1$/.test(num)) {
+            return "размер";
+        } else if (/[2-4]$/.test(num)) {
+            return "размера";
+        } else {
+            return "размеров";
+        }
+    }
+})(jQuery);
