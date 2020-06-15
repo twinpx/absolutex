@@ -5,19 +5,15 @@
             $(".bj-page-header__submenu").addClass("i-animate");
         }, 500);
         var menuItems = 0;
-        $(".swiper-wrapper a").each(function() {
+        $(".bj-page-header__submenu .swiper-wrapper a").each(function() {
             menuItems += $(this).width();
         });
-        var menuItemWidth = menuItems / $(".swiper-wrapper a").length;
-        if ($(".swiper-container").width() < ($(".swiper-wrapper a").length - 1) * 30 + menuItems) {
-            var swiper = new Swiper(".swiper-container", {
-                slidesPerView: Math.round($(".swiper-container").width() * 10 / (menuItemWidth + 30)) / 10,
+        var menuItemWidth = menuItems / $(".bj-page-header__submenu .swiper-wrapper a").length;
+        if ($(".bj-page-header__submenu .swiper-container").width() < ($(".bj-page-header__submenu .swiper-wrapper a").length - 1) * 30 + menuItems) {
+            var swiper = new Swiper(".bj-page-header__submenu .swiper-container", {
+                slidesPerView: Math.round($(".bj-page-header__submenu .swiper-container").width() * 10 / (menuItemWidth + 30)) / 10,
                 spaceBetween: 30,
-                freeMode: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true
-                }
+                freeMode: true
             });
         }
         $("#nav-button-xs").sideNav();
