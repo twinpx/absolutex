@@ -1,6 +1,16 @@
 (function($) {
     "use strict";
     $(function() {
+        $(".b-catalog-detail__sizes-item").mouseenter(function() {
+            var $item = $(this), cls = "", stl = "";
+            if ($item.offset().top - 42 < $(window).scrollTop()) {
+                cls += " i-bottom";
+            }
+            stl += ' style="margin-left: ' + (-75 - Math.max($item.offset().left + $item.width() / 2 + 75 + 10 - $(document).width(), 0)) + 'px;"';
+            $item.append('<div class="b-catalog-detail__popup' + cls + '"><div' + stl + ">В наличии: " + $item.data("qty") + " шт.</div></div>");
+        }).mouseleave(function() {
+            $(this).find(".b-catalog-detail__popup").remove();
+        });
         setTimeout(function() {
             if ($(window).height() > $(".b-catalog-detail__gallery").outerHeight() + 20) {
                 $(".b-catalog-detail__gallery").addClass("i-sticky");
