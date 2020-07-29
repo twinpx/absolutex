@@ -397,6 +397,18 @@ a.bg-primary:hover {
   border-color: #9900cc !important;
   color: #9900cc !important;
 }
+.btn-filled {
+  background-color: #9900cc;
+  border-color: #9900cc;
+  color: #fff !important;
+}
+.btn-filled:hover,
+.btn-filled:active,
+.btn-filled:focus {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+  color: #fff !important;
+}
 input.sale-paysystem-yandex-button-item {
   border: 2px solid #9900cc !important;
 }
@@ -547,7 +559,7 @@ input.sale-paysystem-yandex-button-item:active {
   color: #333333;
 }
 .b-catalog-detail__sizes-block .b-catalog-detail__sizes-item:not(.i-disabled):hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 .b-catalog-detail__sizes-block .b-catalog-detail__sizes-item.i-active:not(.i-disabled) {
   border-bottom-color: #333333;

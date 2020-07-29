@@ -297,27 +297,47 @@ a
 
 .btn
   background-image none
+  height auto
+  text-transform none
+  padding-top 0
+  padding-bottom 0
+  
+  &:hover
+    box-shadow none
+    
+  &-size-S
+    font-size 9.5pt
+    line-height 28px
+    padding-right 12px
+    padding-left 12px
 
-.btn-size-M
-  font-size 10.5pt
-  line-height 35px
+  &-size-M
+    font-size 10.5pt
+    line-height 35px
 
-.btn-size-L
-  font-size 13.5pt
-  line-height 56px
+  &-size-L
+    font-size 13.5pt
+    line-height 56px
 
-.btn-reset
-  background-color #ececec !important
-  border-color #ececec !important
-
-  &:hover,
-  &:active,
-  &:focus
+  &-reset
     background-color #ececec !important
     border-color #ececec !important
-    box-shadow none
-    color #333 !important
-    opacity .7
+
+    &:hover,
+    &:active,
+    &:focus
+      background-color #ececec !important
+      border-color #ececec !important
+      box-shadow none
+      color #333 !important
+      opacity .7
+    
+  &-lg,
+  &-group-lg > &
+    font-size: 1.2rem
+    
+  &-font-S
+    font-size .8rem
 
 @media (max-width:360px)
   .hidden-xxs
@@ -511,23 +531,6 @@ a.bj-icon-link,a.bj-icon-link:hover,a.bj-icon-link:active,a.bj-icon-link:focus
 
 .bj-icon.i-hit:active,a:active .bj-icon.i-hit
   background-position -142px -60px
-
-/*.bj-page-header__top
-  background-color #a3add7
-  color #fff
-  padding 10px 0 0
-  height 60px
-  
-  .bj-icon
-  
-    &.i-menu
-      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUJJREFUeNpi/P//PwM6SE9P9wNSAUDMCBWaBcTH0ZSpAXEFkprDQLwIiP+AODNnzgQLsmAxPAhIFQGxNZLwBSwWqANxIhLfDGr4SiD+CRNkBPkAaCgTkB0KxOVAbMiACW4CMcjia1C+HNQgCyxq7wNxN8g3QF98ZUwDAiCnEIg1GPADkOtOQWlTIOYkoP4ZEE8FBVELEIsyEAYgtVYMxAMpkMNBQZPJQDuQzgQMp7VAxhIaGL4EaPY6JiinAIifU9Hw59CUyMAETbNvgVQKEH8D4otAfIxEA78C8SYgfgRNollAM1/DLYBasg1IyQBpAyA9h0QLfgBxCBArALE0EG+ASTAhqwIa/h7K5CLRAlBu5gViULHwFlmCiYHGYNSCEWwBIxnJlCQLfpJowS8g/ourCMYGLgPxAhIseA3NzRgAIMAA6PRP0Flb5NcAAAAASUVORK5CYII=')
-      
-    &.i-looks
-      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARVJREFUeNpi/P//PwMtAQuMkZ6eLg2k6oGYFU3NGiDeSoxhM2fOxG0BEKgAcSoWfQLEWoDVB0CX8wNpPiCWxKGGE4hliTEMaBa60HeQD84CsRIefe5A/JBMDzwFWSACxIwEFDKSaQEPyIK/RCo+BsS7gfgfEDsBsT0Rev6xEKHoORCHA/FhJLEmIDYF4rWE4oeJgOG/gNgXzXAYOA3EnkD8kRIL5kATAS5wFYgXU2LBISKCcBelQUQIUBRExGQwQ0osABUdbHjkmaEpjGwLdIB4Ah75XiC2JKo0xQMyoQXhLGhmA5XvZkCcDE3CDJRaAAKuUPwTagEHKfUBLwllCzuJZREfyIJuIJaiUYX2lpHWVSZAgAEApvMw2ZSl1+MAAAAASUVORK5CYII=')
-      
-  .row
-    position relative*/
 
 .bj-table
   display table

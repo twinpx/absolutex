@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="bx-no-touch">
   <head>
-    <title>Main page | seller</title>
+    <title>Letter form | Seller</title>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -498,37 +498,68 @@
       </form>
     </div>
     <!-- end /components/tuner/-->
-    <div class="container-fluid">
+    <div class="bj-page-content container-fluid">
+      <ol class="breadcrumb">
+        <li><a href="/" title="Главная страница">Главная страница</a></li>
+        <li><span>Письмо руководству</span></li>
+      </ol>
+    </div>
+    <div class="bj-page-content container-fluid">
+      <h1>Письмо руководству</h1>
+      <!-- start /components/forms.letter/-->
+      <link rel="stylesheet" href="/components/forms.letter/style.css">
+      <script src="/components/forms.letter/script.js"></script>
+      <div class="b-forms-letter">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="b-forms-letter__error">Произошла ошибка!
+              <hr>
+            </div>
+            <form action="/components/forms.letter/response.json" method="GET">
+              <p>Мы внимательно относимся к вашему мнению и следим за качеством оказываемых услуг. Если у вас возникли проблемы или предложения, напишите нам.</p>
+              <hr>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="b-float-label">
+                    <input id="letterFormName" type="text" name="NAME" value="" autocomplete="false">
+                    <label for="letterFormName">Ваше имя</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="b-float-label">
+                    <input id="letterFormEmail" type="text" name="EMAIL" value="" autocomplete="false">
+                    <label for="letterFormEmail">Ваш email</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="b-float-label">
+                    <input id="letterFormCompany" type="text" name="COMPANY" value="" autocomplete="false">
+                    <label for="letterFormCompany">Название организации</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="b-float-label">
+                    <textarea id="letterFormMessage"></textarea>
+                    <label for="letterFormMessage" name="MESSAGE" value="" autocomplete="false">Сообщение</label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-default btn-size-L btn-font-S btn-filled">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <div class="b-forms-letter__response"><img src="/template/images/postman.jpg" alt="">
+          <hr class="i-size-L">
+          <p>Письмо отправлено успешно!<br>Мы уже доставляем его руководству.</p>
+          <hr class="i-size-L"><a href="/catalog/" class="btn btn-default btn-size-L btn-font-S btn-filled">Перейти в каталог</a>
+        </div>
+      </div>
+      <!-- end /components/forms.letter/-->
       <hr class="i-size-L">
-      <hr class="i-size-L">
-      <hr class="i-size-L">
-      <h1>Seller</h1>
-      <h2>Каталог</h2>
-      <ul>
-        <li><a href="/catalog/">Catalog</a></li>
-        <li><a href="/catalog/detail/">Catalog detail</a></li>
-      </ul>
-      <h2>Другие страницы</h2>
-      <ul>
-        <li><a href="/lookbook/">Lookbook</a></li>
-        <li><a href="/personal/cart/">Моя корзина</a></li>
-        <li><a href="/personal/cart-compact/">Моя корзина (compact version)</a></li>
-        <li><a href="/instagram/">Instagram</a></li>
-        <li><a href="/shops/">Магазины</a></li>
-        <li><a href="/shops/shop-detail/">Магазин детально</a></li>
-        <li><a href="/actions/">Акции</a></li>
-      </ul>
-      <h2>Блоки</h2>
-      <ul>
-        <li><a href="/blocks/catalogue-tabs/">Вкладки с товарами (components/catalogue-tabs/)</a></li>
-        <li><a href="/blocks/banners/">Баннеры на главной</a></li>
-      </ul>
-      <h2>Формы</h2>
-      <ul>
-        <li><a href="/forms/auth/">Авторизация</a></li>
-        <li><a href="/forms/reg/">Регистрация</a></li>
-        <li><a href="/forms/letter/">Письмо руководству</a></li>
-      </ul>
     </div>
     <div id="b-float-phone">
       <div class="b-float-phone__bg"></div><span class="b-float-phone__content"><span class="bj-footer-earphone-icon"></span><span class="b-float-phone__text">+7 499 35 007 98</span></span>
