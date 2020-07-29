@@ -4,6 +4,7 @@
   position relative
   margin-top 1rem
   margin-bottom 1rem
+  color #000
   
   input:not([type=checkbox]),
   input:not([type=radio]),
@@ -13,9 +14,9 @@
     border-radius: 3px;
     border: 1px solid transparent;
     outline: none;
-    height: 2.5rem;
+    height: 2.7rem;
     width: 100%;
-    font-size: .8rem;
+    font-size: 1rem;
     margin: 0 0 8px 0;
     padding: 0 10px;
     box-shadow: none;
@@ -26,6 +27,7 @@
     &.i-invalid,
     &:invalid
       border-color: #ff0000;
+      color: #ff0000;
       
       &+label
         color: #ff0000;
@@ -70,7 +72,7 @@
     -webkit-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
     text-align: initial;
-    transform( translateY( .55rem ) translateX( 1rem ))
+    transform( translateY( .6rem ) translateX( 1rem ))
 
     &:not(.label-icon).active
       transform( translateY( -1.6rem ) scale( 0.8 ))
