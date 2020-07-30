@@ -10,8 +10,17 @@ block content
     hr.i-size-L
     hr.i-size-L
     hr.i-size-L
-    
-        
+
     include ../../modules/gallery/fotorama
+    include ../../modules/gallery/swiper
+    
+    link( rel="stylesheet", href="/components/catalog/style.css" )
+    script( src="/components/catalog/script.js" )
+    
     include ../../components/catalog.recommend/template
+    
+    .row
+      
+      .col-sm-6
+        include ../../components/catalog.recommend/template-50
           
