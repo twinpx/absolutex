@@ -9,7 +9,7 @@ script( src="/components/forms.letter/script.js" )
     
     .col-sm-8.col-sm-offset-2
   
-      form( action="/forms/letter/response/" method="GET" )
+      form( action="/components/forms.letter/response.json" method="GET" )
 
         .b-forms-letter__error Произошла ошибка!
           hr
@@ -29,7 +29,7 @@ script( src="/components/forms.letter/script.js" )
           .col-sm-6
           
             .b-float-label
-              input#letterFormEmail( type="email" name="EMAIL" value="" autocomplete="false" data-required="true" )
+              input#letterFormEmail( type="text" name="EMAIL" value="" autocomplete="false" data-required="true" )
               label( for="letterFormEmail" ) Ваш email
         
         .row
@@ -49,4 +49,11 @@ script( src="/components/forms.letter/script.js" )
           
         button.btn.btn-default.btn-size-L.btn-font-S.btn-filled.btn-disabled( type="submit" ) Отправить
         
+  .b-forms-letter__response
+    img( src="/template/images/postman.jpg" alt="" )
+    hr.i-size-L
+    p Письмо отправлено успешно!<br>Мы уже доставляем его руководству.
+    hr.i-size-L
+    a.btn.btn-default.btn-size-L.btn-font-S.btn-filled( href="/catalog/" ) Перейти в каталог
+
 // end /components/forms.letter/

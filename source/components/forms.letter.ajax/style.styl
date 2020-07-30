@@ -11,6 +11,22 @@
   @media( max-width 767px)
     padding 20px
   
+  form
+    transition( all .3s ease )
+  
+  &.i-send
+    
+    form
+      opacity 0
+      transform( translateY( 100% ))
+  
+  &.i-success
+  
+    .b-forms-letter__response
+      opacity 1
+      transform( scale(1))
+      z-index 10
+  
   .btn
     width 250px
     
@@ -33,6 +49,14 @@
   &__response
     text-align center
     line-height 1.2
+    transition( all .5s ease )
+    transform( scale(0))
+    opacity(0)
+    position absolute
+    top 40px
+    left 0
+    width 100%
+    z-index -1
     
     img
       margin 0 auto

@@ -17,7 +17,7 @@
         
         $formElement.addClass( 'i-invalid' );
         
-      } else if ( $formElement.attr( 'type' ) === 'email' ) {
+      } else if ( $formElement.attr( 'id' ) === 'letterFormEmail' ) {
         
         var mailRegex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i;
         var mail = $formElement.val();
@@ -41,7 +41,7 @@
         if ( $.trim( $( elem ).val()) === '' ) {
           flag = false;
           
-        } else if ( $( elem ).attr( 'type' ) === 'email' ) {
+        } else if ( $( elem ).attr( 'id' ) === 'letterFormEmail' ) {
           
           var mailRegex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i;
           var mail = $( elem ).val();
@@ -62,6 +62,7 @@
     });
     
     $( '.b-forms-letter form' ).submit( function(e) {
+      e.preventDefault();
       
       var $form = $( this ), flag = true, $formsLetter = $form.closest( '.b-forms-letter' );
       
@@ -71,7 +72,7 @@
           $( elem ).addClass( 'i-invalid' );
           flag = false;
           
-        } else if ( $( elem ).attr( 'type' ) === 'email' ) {
+        } else if ( $( elem ).attr( 'id' ) === 'letterFormEmail' ) {
           
           var mailRegex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i;
           var mail = $( elem ).val();
@@ -88,9 +89,36 @@
       });
       
       if ( !flag ) {
-        e.preventDefault();
-        return false;
+        return;
       }
+      
+      $.ajax({
+        url: $form.attr( 'action' ),
+        type: $form.attr( 'method' ),
+        dataType: "json",
+        data: $form.serialize(),
+        success: function( data ) {
+          
+          if ( data && typeof data === 'object' && data.STATUS ) {
+            if ( data.STATUS === 'Y' ) {
+              $block.addClass( 'i-send' );
+              setTimeout( function() {
+                $block.addClass( 'i-success' );
+              }, 300);
+            } else if ( data.STATUS === 'N' ) {
+              $error.show();
+            }
+          }
+          
+        },
+        error: function( a, b, c ) {
+          if ( window.console ) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+          }
+        }
+      });
     });
       
     /*if ( window.BX ) {

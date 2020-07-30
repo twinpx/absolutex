@@ -5,7 +5,7 @@
 <div class="b-forms-letter">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-      <form action="/forms/letter/response/" method="GET">
+      <form action="/components/forms.letter/response.json" method="GET">
         <div class="b-forms-letter__error">Произошла ошибка!
           <hr/>
         </div>
@@ -20,7 +20,7 @@
           </div>
           <div class="col-sm-6">
             <div class="b-float-label">
-              <input id="letterFormEmail" type="email" name="EMAIL" value="" autocomplete="false" data-required="true"/>
+              <input id="letterFormEmail" type="text" name="EMAIL" value="" autocomplete="false" data-required="true"/>
               <label for="letterFormEmail">Ваш email</label>
             </div>
           </div>
@@ -44,6 +44,11 @@
         <button type="submit" class="btn btn-default btn-size-L btn-font-S btn-filled btn-disabled">Отправить</button>
       </form>
     </div>
+  </div>
+  <div class="b-forms-letter__response"><img src="/template/images/postman.jpg" alt=""/>
+    <hr class="i-size-L"/>
+    <p>Письмо отправлено успешно!<br>Мы уже доставляем его руководству.</p>
+    <hr class="i-size-L"/><a href="/catalog/" class="btn btn-default btn-size-L btn-font-S btn-filled">Перейти в каталог</a>
   </div>
 </div>
 <!-- end /components/forms.letter/-->
