@@ -54,9 +54,9 @@
       
       //enable/disable the submit button
       if ( flag ) {
-        $form.find( 'button[ type=submit ]' ).removeClass( 'btn-disabled' );
+        $form.find( '[ type=submit ]' ).removeClass( 'btn-disabled' );
       } else {
-        $form.find( 'button[ type=submit ]:not( .btn-disabled )' ).addClass( 'btn-disabled' );
+        $form.find( '[ type=submit ]:not( .btn-disabled )' ).addClass( 'btn-disabled' );
       }
       
     });
