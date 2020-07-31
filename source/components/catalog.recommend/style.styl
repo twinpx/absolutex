@@ -2,4 +2,42 @@
 
 .swiper-slide .bx_catalog_item
   float none
+  
+.b-catalog-recommend
 
+  .swiper-button-next,
+  .swiper-button-prev
+    width 80px
+    height 80px
+    margin-top -40px
+    background-color #fff
+    border-radius 50%
+    box-shadow( 0 0 20px rgb( 231, 231, 231 ))
+    opacity 0
+    transition( opacity .3s ease )
+    
+    &:after
+      font-size 35px
+      color #000
+      transition( color .3s ease )
+      
+    &:hover:after
+      color #9900cc
+    
+    &:focus
+      outline none
+      
+  .swiper-button-next:after
+    margin-right -4px
+      
+  .swiper-button-prev:after
+    margin-left -4px
+      
+  &:hover
+    
+    .swiper-button-next,
+    .swiper-button-prev
+      opacity 1
+      
+      &.swiper-button-disabled
+        opacity 0 

@@ -1,6 +1,7 @@
 (function($) {
     "use strict";
     $(function() {
+        $("[data-original]").lazyload();
         $("#scroll").niceScroll();
         $("#button").click(function() {
             $("#scroll").show();
