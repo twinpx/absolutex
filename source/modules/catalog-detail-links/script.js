@@ -5,11 +5,17 @@ $( function() {
       x: 0
     };
     
+    var $bottomBlock = $( '.b-catalog-recommend:eq(0)' );
+    
+    if ( !$bottomBlock.length ) {
+      $bottomBlock = $( '.bj-page-footer' );
+    }
+    
     $( document ).mousemove( function(e) {
     
       mouseCoords.x = e.pageX;
     
-      var scroll = $( document ).height() - $( '.bj-page-footer' ).outerHeight() - 32 - 64 - $( window ).height()/2;
+      var scroll = $bottomBlock.offset().top - 32 - 64 - $( window ).height()/2;
       
       if ( scroll < ( window.pageYOffset || document.documentElement.scrollTop )) {
         $( '#catalogDetailPrevLink.i-appear, #catalogDetailNextLink.i-appear' ).removeClass( 'i-appear' );
@@ -26,7 +32,7 @@ $( function() {
     });
     
     $( window ).scroll( function(e) {
-      var scroll = $( document ).height() - $( '.bj-page-footer' ).outerHeight() - 32 - 64 - $( window ).height()/2;
+      var scroll = $bottomBlock.offset().top - 32 - 64 - $( window ).height()/2;
       if ( scroll < ( window.pageYOffset || document.documentElement.scrollTop )) {
         $( '#catalogDetailPrevLink, #catalogDetailNextLink' ).removeClass( 'i-appear' ).addClass( 'i-hide' );
         return;

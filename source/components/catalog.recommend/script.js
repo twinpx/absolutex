@@ -4,13 +4,24 @@
   
   $( function() {
     
+    if ( $.fn.lazyload ) {
+      $( '.b-catalog-recommend .b-actions-item__img span' ).lazyload();
+    }
+    
     $( '.b-catalog-recommend__gallery' ).each( function() {
       var $gallery = $( this ),
           $container = $gallery.find( '.swiper-container' );
+          
+      var slidesPerView = 2;
+      if ( window.matchMedia( "(min-width: 768px)" ).matches ) {
+        slidesPerView = $gallery.data( 'slidesperview' );
+      } else if ( window.matchMedia( "(min-width: 400px)" ).matches ) {
+        slidesPerView = 3;
+      }
       
       var swiper = new Swiper( $container, {
-        slidesPerView: $gallery.data( 'slidesperview' ),
-        spaceBetween: 30,
+        slidesPerView: slidesPerView,
+        spaceBetween: 20,
         navigation: {
           nextEl: $gallery.find( '.swiper-button-next' ),
           prevEl: $gallery.find( '.swiper-button-prev' ),
