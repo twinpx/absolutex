@@ -1,6 +1,12 @@
 (function($) {
     "use strict";
     $(function() {
+        if ($.fn.lazyload) {
+            $(".b-catalog-recommend .b-actions-item__img span").lazyload();
+        }
+        setTimeout(function() {
+            $(".b-catalog-recommend").addClass("i-show");
+        }, 500);
         $(".b-catalog-recommend__gallery").each(function() {
             var $gallery = $(this), $container = $gallery.find(".swiper-container");
             var slidesPerView = 2;

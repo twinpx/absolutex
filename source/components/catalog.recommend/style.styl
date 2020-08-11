@@ -5,6 +5,14 @@
   
 .b-catalog-recommend
 
+  &.i-show
+    height auto !important
+    overflow visible !important
+    position static !important
+    
+    &:before
+      display none
+
   &__gallery
     position relative
 
@@ -66,6 +74,6 @@
 @media( max-width 1023px )
   .swiper-button-next,
   .swiper-button-prev
-    display none
+    display none !important
     
 @import '../../components/actions/style.styl'

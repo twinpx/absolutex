@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/template/libs/jquery-ui.min.css">
     <link rel="stylesheet" href="/template/libs/jquery-ui.structure.min.css">
     <link rel="stylesheet" href="/template/libs/jquery-ui.theme.min.css">
-    <link rel="stylesheet" href="/template/libs/jquery-ui.theme.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;amp;subset=cyrillic-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&amp;amp;subset=cyrillic-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;amp;subset=cyrillic-ext" rel="stylesheet">
@@ -320,7 +319,8 @@
       <!-- start /components/catalog.detail/-->
       <link rel="stylesheet" href="/components/catalog.detail/style.css">
       <script src="/components/catalog.detail/script.js"></script>
-      <div class="row"><a id="catalogDetailPrevLink" href="">
+      <div class="row">
+        <style>#catalogDetailPrevLink, #catalogDetailNextLink { display: none; }</style><a id="catalogDetailPrevLink" href="">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
             <g id="arrow-left">
               <polyline points="36.31 44.27 24.04 32 36.31 19.73" class="catalog-detail-svg"></polyline>
@@ -1100,11 +1100,10 @@
       <!-- end /components/catalog.detail/-->
       <link href="/template/libs/swiper.min.css" rel="stylesheet">
       <script src="/template/libs/swiper.min.js"></script>
-      <link rel="stylesheet" href="/components/actions/style.css">
-      <script src="/components/actions/script.js"></script>
       <!-- start /components/catalog.recommend/-->
       <link rel="stylesheet" href="/components/catalog.recommend/style.css">
       <script src="/components/catalog.recommend/script.js"></script>
+      <style>.b-catalog-recommend { height: 300px; overflow: hidden; position: relative;} .b-catalog-recommend:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 300px; background-color: #f2f2f2; z-index: 2; }</style>
       <div class="b-catalog-recommend">
         <div class="b-catalog-recommend__title">С этим товаром рекомендуем</div>
         <hr>
@@ -1254,6 +1253,7 @@
       <!-- start /components/catalog.recommend/-->
       <link rel="stylesheet" href="/components/catalog.recommend/style.css">
       <script src="/components/catalog.recommend/script.js"></script>
+      <style>.b-catalog-recommend { height: 300px; overflow: hidden; position: relative;} .b-catalog-recommend:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 300px; background-color: #f2f2f2; z-index: 2; }</style>
       <div class="b-catalog-recommend">
         <div class="b-catalog-recommend__title">С этим товаром рекомендуем</div>
         <hr>
@@ -1403,6 +1403,7 @@
       <!-- start /components/catalog.recommend/-->
       <link rel="stylesheet" href="/components/catalog.recommend/style.css">
       <script src="/components/catalog.recommend/script.js"></script>
+      <style>.b-catalog-recommend { height: 300px; overflow: hidden; position: relative;} .b-catalog-recommend:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 300px; background-color: #f2f2f2; z-index: 2; }</style>
       <div class="b-catalog-recommend">
         <div class="b-catalog-recommend__title">С этим товаром рекомендуем</div>
         <hr>

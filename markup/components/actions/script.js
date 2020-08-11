@@ -1,6 +1,8 @@
 (function($) {
     "use strict";
     $(function() {
-        $(".b-actions-item__img span").lazyload();
+        if ($.fn.lazyload) {
+            $(".b-actions-item__img span").lazyload();
+        }
     });
 })(jQuery);
