@@ -1,9 +1,6 @@
 (function($) {
     "use strict";
     $(function() {
-        if ($.fn.lazyload) {
-            $(".b-catalog-recommend .b-actions-item__img span").lazyload();
-        }
         setTimeout(function() {
             $(".b-catalog-recommend").addClass("i-show");
         }, 500);
@@ -21,7 +18,8 @@
                 navigation: {
                     nextEl: $gallery.find(".swiper-button-next"),
                     prevEl: $gallery.find(".swiper-button-prev")
-                }
+                },
+                lazy: true
             });
         });
     });
