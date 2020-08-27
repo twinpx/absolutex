@@ -6,7 +6,14 @@ block title
 block content
 
   .container-fluid
+  
+    ol.breadcrumb( temscope="" itemtype="http://schema.org/BreadcrumbList" )
+      li( itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem" )
+        a( href="/" title="Главная страница" )
+          span( itemprop="item" ) Главная страница
+      li( itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem" )
+        span( itemprop="item" ) Регистрация
     
-    h1 Регистрация
+    h1 Регистрация нового пользователя
     
-    //include /components/forms.reg/template
+    include ../../components/forms.reg/template

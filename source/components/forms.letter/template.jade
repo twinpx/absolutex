@@ -23,13 +23,13 @@ script( src="/components/forms.letter/script.js" )
           .col-sm-6
           
             .b-float-label
-              input#letterFormName( type="text" name="NAME" value="" autocomplete="false" data-required="true" )
+              input#letterFormName( type="text" name="NAME" value="" autocomplete="off" data-required="true" )
               label( for="letterFormName" ) Ваше имя
         
           .col-sm-6
           
             .b-float-label
-              input#letterFormEmail( type="email" name="EMAIL" value="" autocomplete="false" data-required="true" )
+              input#letterFormEmail( type="email" name="EMAIL" value="" autocomplete="off" data-required="true" )
               label( for="letterFormEmail" ) Ваш email
         
         .row
@@ -37,15 +37,15 @@ script( src="/components/forms.letter/script.js" )
           .col-sm-6
           
             .b-float-label
-              input#letterFormCompany( type="text" name="COMPANY" value="" autocomplete="false" )
+              input#letterFormCompany( type="text" name="COMPANY" value="" autocomplete="off" )
               label( for="letterFormCompany" ) Название организации
            
         .row
         
           .col-sm-12
             .b-float-label
-              textarea#letterFormMessage( data-required="true" )
-              label( for="letterFormMessage" name="MESSAGE" value="" autocomplete="false" ) Сообщение
+              textarea#letterFormMessage( name="MESSAGE" value="" autocomplete="off" data-required="true" )
+              label( for="letterFormMessage" ) Сообщение
           
         input.btn.btn-default.btn-size-L.btn-font-S.btn-filled.btn-disabled( type="submit" value="Отправить" )
         

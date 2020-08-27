@@ -307,8 +307,123 @@
     </ul><a id="seller-tuner-icon" data-activates="seller-tuner" class="hidden-xs"><span style="background-image: url( '/template/images/headers/header_1_6_0_1/tuner.svg' );"></span></a>
     <!-- end /components/header_1_6_0_1/-->
     <div class="container-fluid">
-      <h1>Регистрация</h1>
-      <!--include /components/forms.reg/template-->
+      <ol temscope="" itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+        <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a href="/" title="Главная страница"><span itemprop="item">Главная страница</span></a></li>
+        <li itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><span itemprop="item">Регистрация</span></li>
+      </ol>
+      <h1>Регистрация нового пользователя</h1>
+      <!-- start /components/forms.reg/-->
+      <link rel="stylesheet" href="/components/forms.reg/style.css">
+      <link rel="stylesheet" href="/components/forms.reg/template_styles.css">
+      <script src="/components/forms.reg/script.js"></script>
+      <div class="bx_registration_page">
+        <div class="bx-auth">     
+          <div class="item-feedback">Регистрация доступна только ОПТОВЫМ клиентам</div><br>
+          <div class="b-form-wrapper">
+            <form method="post" action="/registration/" name="regform" enctype="multipart/form-data">
+              <div class="form-group">
+                <label>Адрес e-mail:<span class="starrequired">*</span></label>
+                <input size="30" type="text" name="REGISTER[EMAIL]" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Пароль:<span class="starrequired">*</span></label>
+                <input size="30" type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Подтверждение пароля:<span class="starrequired">*</span></label>
+                <input size="30" type="password" name="REGISTER[CONFIRM_PASSWORD]" value="" autocomplete="off" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Имя:<span class="starrequired">*</span></label>
+                <input size="30" type="text" name="REGISTER[NAME]" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Фамилия:<span class="starrequired">*</span></label>
+                <input size="30" type="text" name="REGISTER[LAST_NAME]" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Телефон:<span class="starrequired">*</span></label>
+                <input size="30" type="text" name="REGISTER[PERSONAL_PHONE]" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Город:<span class="starrequired">*</span></label>
+                <input size="30" type="text" name="REGISTER[PERSONAL_CITY]" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Наименование компании:<span class="starrequired">*</span></label>
+                <input size="30" type="text" name="REGISTER[WORK_COMPANY]" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>ИНН:<span class="starrequired">*</span></label>
+                <input size="20" name="UF_INN" tabindex="0" type="text" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Юридический адрес:</label>
+                <textarea cols="50" rows="5" name="UF_UR_ADDRESS" tabindex="0" value="" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Фактический адрес:</label>
+                <textarea cols="50" rows="5" name="UF_FIZ_ADDRESS" tabindex="0" value="" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <label>ОГРН:</label>
+                <input size="20" name="UF_OGRN" tabindex="0" type="text" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>КПП:</label>
+                <input size="20" name="UF_KPP" tabindex="0" type="text" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>Р/С:</label>
+                <input size="20" name="UF_RC" tabindex="0" type="text" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>БАНК:</label>
+                <input size="20" name="UF_BANK" tabindex="0" type="text" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>К/С:</label>
+                <input size="20" name="UF_KS" tabindex="0" type="text" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>БИК:</label>
+                <input size="20" name="UF_BIC" tabindex="0" type="text" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <label>ОКПО:</label>
+                <input size="20" name="UF_OKPO" tabindex="0" type="text" value="" class="bx-auth-input form-control">
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <label style="color: #fff;">*</label><br>
+                    <input type="hidden" name="captcha_sid" value="0f66cffc8064931ac0fd9554aa2bc7f3"><img src="/bitrix/tools/captcha.php?captcha_sid=0f66cffc8064931ac0fd9554aa2bc7f3" width="180" height="40" alt="CAPTCHA">
+                  </div>
+                  <hr class="visible-xs-block">
+                  <div class="col-sm-8">
+                    <label><span class="starrequired">*</span>Введите слово на картинке</label>
+                    <input type="text" name="captcha_word" maxlength="50" value="" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div id="register-user-conf" style="border-bottom: 0;" class="form-group checkbox">
+                <input id="filled-in-box" type="checkbox" value="Y" name="" class="filled-in">
+                <label for="filled-in-box" class="main-user-consent-request">Нажимая на кнопку «Регистрация», вы даете согласие на обработку своих персональных данных.<br><a target="_blank" href="/about/rules/">Пользовательское соглашение</a>.</label>
+              </div>
+              <div style="border-bottom: 0;" class="form-group button-block">
+                <input type="button" name="R" value="Регистрация" class="btn btn-default i-moke-button">
+                <input type="submit" name="register_submit_button" value="Регистрация" class="btn btn-default">
+              </div>
+              <!--
+              p>Пароль должен быть не менее 6 символов длиной.</p>
+              <p><span class="starrequired">*</span>Поля, обязательные для заполнения.</p
+              
+              -->
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end /components/forms.reg/-->
     </div>
     <div id="b-float-phone">
       <div class="b-float-phone__bg"></div><span class="b-float-phone__content"><span class="bj-footer-earphone-icon"></span><span class="b-float-phone__text">+7 499 35 007 98</span></span>
