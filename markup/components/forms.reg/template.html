@@ -8,104 +8,117 @@
     <div class="item-feedback">Регистрация доступна только ОПТОВЫМ клиентам</div><br/>
     <div class="b-form-wrapper">
       <form method="post" action="/registration/" name="regform" enctype="multipart/form-data">
-        <div class="form-group">
-          <label>Адрес e-mail:<span class="starrequired">*</span></label>
-          <input size="30" type="text" name="REGISTER[EMAIL]" value="" class="bx-auth-input form-control"/>
+        <div class="b-float-label">
+          <input id="regFormEmail" type="text" name="REGISTER[EMAIL]" value="" autocomplete="on" data-required="true"/>
+          <label for="regFormEmail">Адрес e-mail</label>
         </div>
-        <div class="form-group">
-          <label>Пароль:<span class="starrequired">*</span></label>
-          <input size="30" type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormPass" type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off" data-required="true"/>
+          <label for="regFormPass">Пароль</label>
         </div>
-        <div class="form-group">
-          <label>Подтверждение пароля:<span class="starrequired">*</span></label>
-          <input size="30" type="password" name="REGISTER[CONFIRM_PASSWORD]" value="" autocomplete="off" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormPassConfirm" type="password" name="REGISTER[CONFIRM_PASSWORD]" value="" autocomplete="off" data-required="true"/>
+          <label for="regFormPassConfirm">Подтверждение пароля</label>
         </div>
-        <div class="form-group">
-          <label>Имя:<span class="starrequired">*</span></label>
-          <input size="30" type="text" name="REGISTER[NAME]" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormName" type="text" name="REGISTER[NAME]" value="" autocomplete="on" data-required="true"/>
+          <label for="regFormName">Имя</label>
         </div>
-        <div class="form-group">
-          <label>Фамилия:<span class="starrequired">*</span></label>
-          <input size="30" type="text" name="REGISTER[LAST_NAME]" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormLastName" type="text" name="REGISTER[LAST_NAME]" value="" autocomplete="on" data-required="true"/>
+          <label for="regFormLastName">Фамилия</label>
         </div>
-        <div class="form-group">
-          <label>Телефон:<span class="starrequired">*</span></label>
-          <input size="30" type="text" name="REGISTER[PERSONAL_PHONE]" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormPhone" type="tel" name="REGISTER[PERSONAL_PHONE]" value="" autocomplete="on" data-required="true"/>
+          <label for="regFormPhone">Телефон</label>
         </div>
-        <div class="form-group">
-          <label>Город:<span class="starrequired">*</span></label>
-          <input size="30" type="text" name="REGISTER[PERSONAL_CITY]" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormCity" type="text" name="REGISTER[PERSONAL_CITY]" value="" autocomplete="on" data-required="true"/>
+          <label for="regFormCity">Город</label>
         </div>
-        <div class="form-group">
-          <label>Наименование компании:<span class="starrequired">*</span></label>
-          <input size="30" type="text" name="REGISTER[WORK_COMPANY]" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormCompany" type="text" name="REGISTER[WORK_COMPANY]" value="" autocomplete="on" data-required="true"/>
+          <label for="regFormCompany">Наименование компании</label>
         </div>
-        <div class="form-group">
-          <label>ИНН:<span class="starrequired">*</span></label>
-          <input size="20" name="UF_INN" tabindex="0" type="text" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormINN" type="text" name="UF_INN" value="" autocomplete="on" data-required="true"/>
+          <label for="regFormINN">ИНН</label>
         </div>
-        <div class="form-group">
-          <label>Юридический адрес:</label>
-          <textarea cols="50" rows="5" name="UF_UR_ADDRESS" tabindex="0" value="" class="form-control"></textarea>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <textarea id="letterFormUrAddress" name="UF_UR_ADDRESS" value="" cols="50" rows="5"></textarea>
+          <label for="letterFormUrAddress">Юридический адрес</label>
         </div>
-        <div class="form-group">
-          <label>Фактический адрес:</label>
-          <textarea cols="50" rows="5" name="UF_FIZ_ADDRESS" tabindex="0" value="" class="form-control"></textarea>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <textarea id="letterFormFizAddress" name="UF_FIZ_ADDRESS" value="" cols="50" rows="5"></textarea>
+          <label for="letterFormFizAddress">Фактический адрес</label>
         </div>
-        <div class="form-group">
-          <label>ОГРН:</label>
-          <input size="20" name="UF_OGRN" tabindex="0" type="text" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormOGRN" type="text" name="UF_OGRN" value="" autocomplete="on"/>
+          <label for="regFormOGRN">ОГРН</label>
         </div>
-        <div class="form-group">
-          <label>КПП:</label>
-          <input size="20" name="UF_KPP" tabindex="0" type="text" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormKPP" type="text" name="UF_KPP" value="" autocomplete="on"/>
+          <label for="regFormKPP">КПП</label>
         </div>
-        <div class="form-group">
-          <label>Р/С:</label>
-          <input size="20" name="UF_RC" tabindex="0" type="text" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormRS" type="text" name="UF_RC" value="" autocomplete="on"/>
+          <label for="regFormRS">Р/С</label>
         </div>
-        <div class="form-group">
-          <label>БАНК:</label>
-          <input size="20" name="UF_BANK" tabindex="0" type="text" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormBank" type="text" name="UF_BANK" value="" autocomplete="on"/>
+          <label for="regFormBank">БАНК</label>
         </div>
-        <div class="form-group">
-          <label>К/С:</label>
-          <input size="20" name="UF_KS" tabindex="0" type="text" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormKS" type="text" name="UF_KS" value="" autocomplete="on"/>
+          <label for="regFormKS">К/С</label>
         </div>
-        <div class="form-group">
-          <label>БИК:</label>
-          <input size="20" name="UF_BIC" tabindex="0" type="text" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormBIK" type="text" name="UF_BIC" value="" autocomplete="on"/>
+          <label for="regFormBIK">БИК</label>
         </div>
-        <div class="form-group">
-          <label>ОКПО:</label>
-          <input size="20" name="UF_OKPO" tabindex="0" type="text" value="" class="bx-auth-input form-control"/>
+        <hr class="i-size-M"/>
+        <div class="b-float-label">
+          <input id="regFormOKPO" type="text" name="UF_OKPO" value="" autocomplete="on"/>
+          <label for="regFormOKPO">ОКПО</label>
         </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-sm-4">
-              <label style="color: #fff;">*</label><br/>
-              <input type="hidden" name="captcha_sid" value="0f66cffc8064931ac0fd9554aa2bc7f3"/><img src="/bitrix/tools/captcha.php?captcha_sid=0f66cffc8064931ac0fd9554aa2bc7f3" width="180" height="40" alt="CAPTCHA"/>
-            </div>
-            <hr class="visible-xs-block"/>
-            <div class="col-sm-8">
-              <label><span class="starrequired">*</span>Введите слово на картинке</label>
-              <input type="text" name="captcha_word" maxlength="50" value="" class="form-control"/>
+        <hr class="i-size-M"/>
+        <div class="row b-form-captcha">
+          <div class="col-sm-4">
+            <input type="hidden" name="captcha_sid" value="0f66cffc8064931ac0fd9554aa2bc7f3"/><img src="/bitrix/tools/captcha.php?captcha_sid=0f66cffc8064931ac0fd9554aa2bc7f3" width="180" height="40" alt="CAPTCHA"/>
+          </div>
+          <hr class="visible-xs-block"/>
+          <div class="col-sm-8">
+            <div class="b-float-label">
+              <input id="regFormCaptcha" type="text" name="captcha_word" value="" autocomplete="on" data-required="true"/>
+              <label for="regFormCaptcha">Введите слово на картинке</label>
             </div>
           </div>
         </div>
-        <div id="register-user-conf" style="border-bottom: 0;" class="form-group checkbox">
+        <div id="register-user-conf" style="border-bottom: 0;" class="checkbox">
           <input id="filled-in-box" type="checkbox" value="Y" name="" class="filled-in"/>
           <label for="filled-in-box" class="main-user-consent-request">Нажимая на кнопку «Регистрация», вы даете согласие на обработку своих персональных данных.<br/><a target="_blank" href="/about/rules/">Пользовательское соглашение</a>.</label>
         </div>
-        <div style="border-bottom: 0;" class="form-group button-block">
+        <hr class="i-size-M"/>
+        <div style="border-bottom: 0;" class="button-block">
           <input type="button" name="R" value="Регистрация" class="btn btn-default i-moke-button"/>
           <input type="submit" name="register_submit_button" value="Регистрация" class="btn btn-default"/>
         </div>
-        <!--
-        p>Пароль должен быть не менее 6 символов длиной.</p>
-        <p><span class="starrequired">*</span>Поля, обязательные для заполнения.</p
-        
-        -->
       </form>
     </div>
   </div>
