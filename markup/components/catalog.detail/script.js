@@ -1,6 +1,11 @@
+Number.prototype.format = function() {
+    return this.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
+};
+
 (function($) {
     "use strict";
     $(function() {
+        var percentage = 0;
         $(".b-catalog-detail__sizes-item").mouseenter(function() {
             var $item = $(this), cls = "", stl = "";
             if ($item.offset().top - 42 < $(window).scrollTop()) {
@@ -23,6 +28,21 @@
             $img.addClass("i-active");
             $(".b-catalog-element-gallery__main-img").fadeOut(300, function() {
                 $(this).attr("src", $img.data("src")).attr("data-large", $img.data("large")).fadeIn(300);
+            });
+        });
+        var priceBlocks = document.querySelectorAll(".b-catalog-detail__prices .b-catalog-detail__price");
+        var price = /[\d\s]*/.exec(priceBlocks[1].textContent)[0].split(" ").join("") * 1;
+        var actionPrice = /[\d\s]*/.exec(priceBlocks[2].textContent)[0].split(" ").join("") * 1;
+        percentage = actionPrice / price;
+        var currency = String(priceBlocks[1].textContent).substring(String(priceBlocks[1].textContent).search(/[а-яё]*\.?$/));
+        document.querySelectorAll(".b-catalog-detail__basic-prices .b-catalog-detail__price").forEach(function(priceElem) {
+            var action = Math.round(/[\d\s]*/.exec(priceElem.textContent)[0].split(" ").join("") * 1 * percentage);
+            priceElem.setAttribute("data-action", action);
+        });
+        document.querySelectorAll(".b-catalog-detail__prices input").forEach(function(input) {
+            input.addEventListener("change", function() {
+                var priceText = this.parentNode.querySelector(".b-catalog-detail__price").getAttribute("data-action");
+                this.closest(".b-catalog-detail__prices").querySelectorAll(".b-catalog-detail__price")[2].textContent = Number(priceText).format() + " " + currency;
             });
         });
         $(".b-catalog-detail__info").each(function() {
@@ -65,6 +85,7 @@
             var data = {};
             data.id = [];
             data.price = $(".b-catalog-detail__prices :radio:checked").val();
+            data.percentage = percentage;
             if ($button.hasClass("i-disabled")) {
                 return;
             }

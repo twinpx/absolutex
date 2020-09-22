@@ -62,9 +62,12 @@
 
 .b-catalog-detail__prices label {
   display: block;
-  cursor: pointer;
   padding: 16px 0 17px;
   margin-bottom: 0;
+  
+  &[for] {
+    cursor: pointer;
+  }
 }
 
 .b-catalog-detail__prices input {
