@@ -30,32 +30,33 @@
   <div class="col-sm-6">
     <!--Минимальная цена указывается в самом диве. Показывается если ничего не выбрано-->
     <div data-price-1="1 300 руб." data-price-2="1 300 руб." data-price-3="14 257 руб." data-price-4="14 257 руб." class="b-catalog-detail__info i-1">
+      <div class="b-catalog-detail__action">Участвует в акции «Название акции 5%»</div>
+      <div class="b-catalog-detail__heading"><span>Выбирайте удобную для себя программу</span></div>
       <div class="b-catalog-detail__prices">
-        <div class="row b-catalog-detail__basic-prices">
-          <div class="col-xs-6">
-            <input id="catalogDetailPricesInput1" type="radio" name="price" value="1"/>
-            <label for="catalogDetailPricesInput1">
-              <h5>Рассрочка</h5>
-              <div data-price="1" class="b-catalog-detail__price">14 257 руб.</div>
-            </label>
-          </div>
-          <div class="col-xs-6 text-right">
-            <input id="catalogDetailPricesInput2" type="radio" name="price" value="2"/>
-            <label for="catalogDetailPricesInput2">
-              <h5>Выкуп</h5>
-              <div data-price="2" class="b-catalog-detail__price">12 257 руб.</div>
-            </label>
-          </div>
+        <div class="b-catalog-detail__prices-item">
+          <input id="catalogDetailPricesInput1" type="radio" name="price" value="1" checked="checked"/>
+          <label for="catalogDetailPricesInput1">
+            <h5>Рассрочка</h5>
+            <div class="b-catalog-detail__price">14 257 &#8381;</div>
+          </label>
         </div>
-        <div class="row">
-          <div class="col-xs-6">
-            <label>
-              <h5>Акция</h5>
-              <div data-price="3" class="b-catalog-detail__price">10 257 руб.</div>
-            </label>
-          </div>
+        <div class="b-catalog-detail__prices-item">
+          <input id="catalogDetailPricesInput2" type="radio" name="price" value="2"/>
+          <label for="catalogDetailPricesInput2">
+            <h5>Выкуп</h5>
+            <div class="b-catalog-detail__price i-sale">12 257 &#8381;</div>
+            <s>6 420 &#8381;</s>
+          </label>
+        </div>
+        <div class="b-catalog-detail__prices-item">
+          <input id="catalogDetailPricesInput3" type="radio" name="price" value="3"/>
+          <label for="catalogDetailPricesInput3">
+            <h5>Акция</h5>
+            <div class="b-catalog-detail__price">10 257 &#8381;</div>
+          </label>
         </div>
       </div>
+      <div class="b-catalog-detail__heading"><span>Выбирайте один или несколько размеров</span></div>
       <hr/>
       <div class="b-catalog-detail__sizes">
         <div class="b-catalog-detail__sizes-row">

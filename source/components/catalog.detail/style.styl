@@ -1,35 +1,133 @@
-.b-catalog-detail__gallery.i-sticky {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 20px;
-}
-@media( max-width 600px ) {
-  .b-catalog-detail__gallery.i-sticky {
-    position: static;
-  }
-}
-.b-catalog-detail__info {
-	background-color: #f2f2f2;
-	padding: 30px 23px;
-	color: #333;
+.b-catalog-detail
+
+  &__action
+    background-color #ff544d
+    text-align center
+    color #fff
+    font-size 15px
+    line-height 1.2
+    padding 14px
+    margin-bottom 38px
+
+  &__heading
+    border-top 1px solid #dfdfdf
+    text-align center
+
+    span
+      display inline-block
+      vertical-align top
+      background-color #f2f2f2
+      font-size 11px
+      line-height 15px
+      padding 0 8px
+      margin-top -8px
+
+  &__price
+    white-space nowrap
+
+    &.i-sale
+      color #ff3028
+
+  &__prices
+    padding 0 17px
+    display flex
+    justify-content space-around
+    margin-bottom 38px
+    flex-wrap wrap
+
+    @media( max-width 767px )
+      padding 0
+
+    s
+      white-space nowrap
+
+    &-item
+      width calc( (100% - 30px * 2) / 3 )
+      margin-left 30px
+
+      &:first-child
+        margin-left 0
+
+      @media( max-width 1100px ) and ( min-width 768px )
+        width calc( (100% - 30px) / 2 )
+
+        &:nth-child(3)
+          margin-left 0
+
+      @media( max-width 767px )
+        width calc( (100% - 30px * 2) / 3 )
+
+      @media( max-width 500px )
+        width calc( (100% - 30px) / 2 )
+
+        &:nth-child(3)
+          margin-left 0
+
+    label
+      display block
+      padding 17px
+      margin-bottom 0
+      cursor pointer
+      border 2px solid transparent
+      height 100%
+
+    input:checked ~ label
+      border 2px solid #9a639a
+
+  &__info
+    background-color #f2f2f2
+    padding 23px 23px
+    color #333
+
+    h5
+      font-size 8px
+      font-weight normal
+      text-transform uppercase
+      color #333
+      margin-bottom 0
+
+.b-catalog-detail__prices input {
+  display: none;
 }
 
-.b-catalog-detail__info h5 {
-	font-size: 6pt;
-	text-transform: uppercase;
-	color: #7a7a7a;
-  text-shadow: 1px 0 0 #fff;
+.b-catalog-detail__prices [type="radio"]+label:before,
+.b-catalog-detail__prices [type="radio"]+label:after {
+  /*anti materialize*/
+  display: none;
+}
+
+.b-catalog-detail__prices [type="radio"]:not(:checked)+label,
+.b-catalog-detail__prices [type="radio"]:checked+label {
+  /*anti materialize*/
+  //height: auto;
+  max-height: 100%;
+  //padding-left: 0;
+  color: inherit;
+}
+
+.b-catalog-detail__prices .row {
+  /*anti materialize*/
   margin-bottom: 0;
 }
 
+.b-catalog-detail__price {
+	font-size: 16pt;
+	font-weight: bold;
+  line-height: 31px;
+}
+
+.b-catalog-detail__basic-prices .b-catalog-detail__price {
+  font-size: 21pt;
+}
+
 .b-catalog-detail__info .col-xs-3 {
-	color: #000;
-	font-size: 11pt;
-	line-height: 22px;
+  color: #000;
+  font-size: 11pt;
+  line-height: 22px;
 }
 
 .b-catalog-detail__info .col-xs-3 sup {
-	font-size: 7pt
+  font-size: 7pt
 }
 
 .b-catalog-detail__info hr.i-line {
@@ -52,65 +150,15 @@
 	pointer-events: none
 }
 
-.b-catalog-detail__prices .row:first-child {
-  border-bottom: 1px solid #e1e1e1;
+.b-catalog-detail__gallery.i-sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px;
 }
-
-.b-catalog-detail__prices .col-xs-6:first-child {
-  background: url( 'data:image/gif;base64,R0lGODlhAQAzAIAAAOHh4QAAACH5BAAAAAAALAAAAAABADMAAAIGhI+py60FADs=' ) no-repeat right center;
-}
-
-.b-catalog-detail__prices label {
-  display: block;
-  padding: 16px 0 17px;
-  margin-bottom: 0;
-  
-  &[for] {
-    cursor: pointer;
+@media( max-width 600px ) {
+  .b-catalog-detail__gallery.i-sticky {
+    position: static;
   }
-}
-
-.b-catalog-detail__prices input {
-  display: none;
-}
-
-.b-catalog-detail__prices input:checked ~ label,
-.b-catalog-detail__prices input:checked ~ label * {
-  color: #996699;
-}
-
-.b-catalog-detail__prices [type="radio"]+label:before,
-.b-catalog-detail__prices [type="radio"]+label:after {
-  /*anti materialize*/
-  display: none;
-}
-
-.b-catalog-detail__prices [type="radio"]:not(:checked)+label,
-.b-catalog-detail__prices [type="radio"]:checked+label {
-  /*anti materialize*/
-  height: auto;
-  max-height: 100%;
-  padding-left: 0;
-  color: inherit;
-}
-
-.b-catalog-detail__prices .row {
-  /*anti materialize*/
-  margin-bottom: 0;
-}
-
-.b-catalog-detail__price {
-	font-size: 16pt;
-	font-weight: bold;
-  line-height: 31px;
-}
-
-.b-catalog-detail__basic-prices .b-catalog-detail__price {
-  font-size: 21pt;
-}
-
-.b-catalog-detail__price.i-sale {
-	color: #ff3028
 }
 
 .b-catalog-detail__sizes-row {
