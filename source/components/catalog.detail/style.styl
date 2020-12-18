@@ -1,4 +1,11 @@
 .b-catalog-detail
+      
+  &__props-icons
+    text-align right
+    
+    @media( max-width 767px )
+      text-align center
+      margin-top 10px
 
   &__action
     background-color #ff544d
@@ -85,6 +92,21 @@
       text-transform uppercase
       color #333
       margin-bottom 0
+      
+.b-prop
+  border 1px solid transparent
+  line-height 23px
+  height 23px
+  padding 0 9px
+  font-size 7pt
+  text-transform uppercase
+  margin -7px 0 3px 8px
+  display inline-block
+  border-width 1px
+  border-style solid
+  
+  @media( max-width 767px )
+    margin 0 4px 3px
 
 .b-catalog-detail__prices input {
   display: none;
