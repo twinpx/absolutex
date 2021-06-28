@@ -3,63 +3,11 @@
   'use strict';
   
   $( function() {
-  
-    //bigData from Bitrix
-    /*if ( window.BX ) {
-      BX.ready(BX.delegate( this.bigDataLoad, this ));
-    }
     
-    function bigDataLoad() {
-        var t = "https://analytics.bitrix.info/crecoms/v1_0/recoms.php",
-            e = BX.ajax.prepareData(this.bigData.params);
-        if (e) {
-            t += (t.indexOf("?") !== -1 ? "&" : "?") + e;
-        }
-        var a = BX.delegate(function(t) {
-            sendRequest({
-                action: "deferredLoad",
-                bigData: "Y",
-                items: t && t.items || [],
-                rid: t && t.id,
-                count: this.bigData.count,
-                rowsRange: this.bigData.rowsRange,
-                shownIds: this.bigData.shownIds
-            });
-        }, this);
-        BX.ajax({
-            method: "GET",
-            dataType: "json",
-            url: t,
-            timeout: 3,
-            onsuccess: a,
-            onfailure: a
-        });
-    }
-    
-    function sendRequest(t) {
-        var e = {
-            siteId: this.siteId,
-            template: this.template,
-            parameters: this.parameters
-        };
-        if (this.ajaxId) {
-            e.AJAX_ID = this.ajaxId
-        }
-        BX.ajax({
-            url: this.componentPath + "/ajax.php" + (document.location.href.indexOf("clear_cache=Y") !== -1 ? "?clear_cache=Y" : ""),
-            method: "POST",
-            dataType: "json",
-            timeout: 60,
-            data: BX.merge(e, t),
-            onsuccess: BX.delegate(function(e) {
-                if (!e || !e.JS)
-                    return;
-                BX.ajax.processScripts(BX.processHTML(e.JS).SCRIPT, false, BX.delegate(function() {
-                    this.showAction(e, t)
-                }, this))
-            }, this)
-        })
-    }*/
+    //click on filter checkbox
+    $( '.bj-catalogue-filter .checkbox' ).click( function() {
+      $( this ).toggleClass( 'active' );
+    });
     
     //scroll to sort
     if ( String( window.location.search ).search( 'sort=' ) !== -1 ) {
@@ -88,16 +36,6 @@
           if ( String( $title.text()).length > 40 ) {
             $title.text( $.trim( String( $title.text()).substring( 0, 39 )) + '...' );
           }
-          
-          /*if ( $this.closest( 'div[class *= col-sm]' ).is( '.col-sm-2' ) && String( $title.text()).length > 24 ) {
-            $title.text( $.trim( String( $title.text()).substring( 0, 24 )) + '...' );
-          } else if ( $this.closest( 'div[class *= col-sm]' ).is( '.col-sm-3' ) && String( $title.text()).length > 33 ) {
-            $title.text( $.trim( String( $title.text()).substring( 0, 33 )) + '...' );
-          } else if ( $this.closest( 'div[class *= col-sm]' ).is( '.col-sm-4' ) && String( $title.text()).length > 56 ) {
-            $title.text( $.trim( String( $title.text()).substring( 0, 56 )) + '...' );
-          } else if ( $this.closest( 'div[class *= col-sm]' ).is( '.col-sm-6' ) && String( $title.text()).length > 119 ) {
-            $title.text( $.trim( String( $title.text()).substring( 0, 119 )) + '...' );
-          }*/
           
         });
       } else {

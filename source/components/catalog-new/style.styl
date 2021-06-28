@@ -64,6 +64,14 @@
       font-size .8rem
       padding 0 15px
       z-index 3
+      
+    &__props-icons
+      position absolute
+      top 0
+      left 0
+      display flex
+      flex-wrap wrap
+      z-index 5
             
     &__title
       opacity( 1 !important )
@@ -87,7 +95,6 @@
     &__price
       font-weight bold
       font-size 9pt
-      display inline-block
       vertical-align top
       margin-right 10px
       opacity( 1 !important )
@@ -115,6 +122,17 @@
       vertical-align top
       opacity( 1 !important )
       transition( opacity .5s ease )
+      
+.b-prop
+  line-height 20px
+  height 18px
+  padding 0 15px
+  font-size 7pt
+  display inline-block
+  color #fff
+  
+  @media( max-width 767px )
+    margin 0 4px 3px
       
 .bj-sorting
   font-size .85rem

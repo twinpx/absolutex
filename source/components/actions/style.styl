@@ -67,8 +67,10 @@
       
     &__props-icons
       position absolute
-      top 10px
-      left 10px
+      top 0
+      left 0
+      display flex
+      flex-wrap wrap
       z-index 5
             
     &__title
@@ -123,16 +125,12 @@
       transition( opacity .5s ease )
       
 .b-prop
-  background-color #fff
   line-height 20px
-  height 20px
-  padding 0 5px
+  height 18px
+  padding 0 15px
   font-size 7pt
-  text-transform uppercase
-  margin 0 3px 3px 0
   display inline-block
-  border-width 1px
-  border-style solid
+  color #fff
   
   @media( max-width 767px )
     margin 0 4px 3px

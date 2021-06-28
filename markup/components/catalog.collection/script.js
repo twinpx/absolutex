@@ -1,6 +1,9 @@
 (function($) {
     "use strict";
     $(function() {
+        $(".bj-catalogue-filter .checkbox").click(function() {
+            $(this).toggleClass("active");
+        });
         if (String(window.location.search).search("sort=") !== -1) {
             setTimeout(function() {
                 $.scrollTo($(".bj-sorting:eq(0)").offset().top - 30, 500);
