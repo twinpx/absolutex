@@ -12,10 +12,29 @@
     var $form = $('.b-catalog-detail__reg form');
     var ajaxUrl = $form.attr('action');
     var ajaxMethod = $form.attr('method');
+    var $textInput = $form.find('input[type=text]');
+    var $passwordInput = $form.find('input[type=password]');
 
-    document
-      .querySelector('.b-catalog-detail__reg__button .btn')
-      .addEventListener('click', function () {
+    //verify fields
+    $form.submit(function (e) {
+      e.preventDefault();
+      var flag = true;
+      //text
+      if ($textInput.val() === '') {
+        $textInput.addClass('i-invalid');
+        flag = false;
+      } else {
+        $textInput.removeClass('i-invalid');
+      }
+      //password
+      if ($passwordInput.val() === '') {
+        $passwordInput.addClass('i-invalid');
+        flag = false;
+      } else {
+        $passwordInput.removeClass('i-invalid');
+      }
+
+      if (flag) {
         //fetch data
         $.ajax({
           url: ajaxUrl,
@@ -34,6 +53,7 @@
             }
           },
         });
-      });
+      }
+    });
   });
 })(jQuery);

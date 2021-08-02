@@ -336,46 +336,107 @@
         </div>
         <div class="col-sm-4 text-right"><a href="../" class="back-to-catalogue">Вернуться в каталог</a></div>
       </div>
-      <div id="catalogDetailWrap"></div>
-      <div id="catalogDetailNotAuth" class="row">
-        <div class="col-sm-6 b-catalog-detail__gallery"> 
-          <div class="b-catalog-detail__gallery-placeholder"></div>
+      <script src="/template/zoomsl-3.0.min.js"></script>
+      <script src="/components/catalog.detail/download.js"></script>
+      <div class="b-catalog-detail__props-icons text-right">
+        <div style="color: #ca3538; border-color: #ca3538;" class="b-prop">35%</div>
+        <div style="color: #528b16; border-color: #528b16;" class="b-prop">Рекомендуем</div>
+        <div style="color: #f09e00; border-color: #f09e00;" class="b-prop">Хит</div>
+        <div style="color: #8e42b1; border-color: #8e42b1;" class="b-prop">Акция</div>
+        <div style="color: #8e42b1; border-color: #8e42b1;" class="b-prop">Новинка</div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6 b-catalog-detail__gallery">
+          <link href="/template/libs/fotorama-4.6.4.css" rel="stylesheet">
+          <script src="/template/libs/fotorama-4.6.4.js"></script>
+          <div data-nav="thumbs" class="fotorama"><img src="/upload/catalog/1.jpg" alt=""><img src="/upload/catalog/2.jpg" alt=""><img src="/upload/catalog/3.jpg" alt=""><img src="/upload/catalog/4.jpg" alt=""></div>
         </div>
         <hr class="visible-xs-block i-size-L">
         <div class="col-sm-6">
-          <div class="b-catalog-detail__auth-reg">
-            <div class="b-catalog-detail__not-auth">
-              <div class="b-catalog-detail__not-auth__text">Цены и размерная сетка доступны только зарегистрированным оптовым клиентам.</div>
-              <div class="b-catalog-detail__not-auth__buttons">
-                <div class="btn btn-default">Войти</div><a href="/forms/reg/" class="btn btn-default">Зарегистрироваться</a>
+          <div id="catalogDetailWrap"></div>
+          <div id="catalogDetailNotAuth">
+            <div class="b-catalog-detail__auth-reg">
+              <div class="b-catalog-detail__not-auth">
+                <div class="b-catalog-detail__not-auth__text">Цены и размерная сетка доступны только зарегистрированным оптовым клиентам.</div>
+                <div class="b-catalog-detail__not-auth__buttons">
+                  <div class="btn btn-default">Войти</div><a href="/forms/reg/" class="btn btn-default">Зарегистрироваться</a>
+                </div>
               </div>
-            </div>
-            <div class="b-catalog-detail__reg">
-              <div class="b-catalog-detail__reg__text">Введите ваши регистрационные данные</div>
-              <form action="/components/catalog.detail/download.html" method="GET"> 
-                <div class="b-catalog-detail__reg__form">
-                  <div class="b-float-label">
-                    <input id="regFormEmail" type="text" name="REGISTER[EMAIL]" value="" autocomplete="on" data-required="true">
-                    <label for="regFormEmail">Адрес e-mail</label>
+              <div class="b-catalog-detail__reg">
+                <div class="b-catalog-detail__reg__text">Введите ваши регистрационные данные</div>
+                <form action="/components/catalog.detail/download.html" method="GET"> 
+                  <div class="b-catalog-detail__reg__form">
+                    <div class="b-float-label">
+                      <input id="regFormEmail" type="text" name="REGISTER[EMAIL]" value="" autocomplete="on">
+                      <label for="regFormEmail">Адрес e-mail</label>
+                    </div>
+                    <hr class="i-size-M">
+                    <div class="b-float-label">
+                      <input id="regFormPass" type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off">
+                      <label for="regFormPass">Пароль</label>
+                    </div>
                   </div>
-                  <hr class="i-size-M">
-                  <div class="b-float-label">
-                    <input id="regFormPass" type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off" data-required="true">
-                    <label for="regFormPass">Пароль</label>
+                  <div class="b-catalog-detail__reg__button">
+                    <button type="submit" class="btn btn-default">Войти </button>
                   </div>
+                </form>
+                <div class="b-catalog-detail__reg__note">
+                  Или
+                   <a href="/forms/reg/">зарегистрируйтесь.</a>
                 </div>
-                <div class="b-catalog-detail__reg__button">
-                  <div class="btn btn-default">Войти </div>
-                </div>
-              </form>
-              <div class="b-catalog-detail__reg__note">
-                Или
-                 <a href="/forms/reg/">зарегистрируйтесь.</a>
               </div>
             </div>
           </div>
+          <div class="item-information">
+            <div class="b-catalog-brand"><span>Бренд: Bazioni</span></div>
+            <div class="b-catalog-brand"><img src="/upload/brand-logo.jpg" width="130" height="40" alt=""><span>Бренд: Bazioni</span></div>
+          </div>
+          <hr>
+          <div class="item-details-accordeon">
+            <div class="collapsing-block">
+              <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Описание</div>
+              <div class="collapsing-content">
+                <div class="inner">
+                  <p>Мужской полуприлегающий костюм PIZANO синего цвета Classic fit ABSOLUTEX</p>
+                </div>
+              </div>
+            </div>
+            <div class="collapsing-block closed">
+              <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Детали</div>
+              <div class="collapsing-content">
+                <div class="inner">Артикул: 1321* M PIZANO<br>			Состав: 30%шерсть, 50%вискоза, 20% полиэстер<br>									Сезон: Мультисезон<br>			Страна производитель: РОССИЯ<br></div>
+              </div>
+            </div>
+            <div class="collapsing-block closed">
+              <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Силуэт</div>
+              <div class="collapsing-content">
+                <div class="inner">
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-4"><img src="/upload/iblock/a38/a38787fb79bf3a052425d3b79813f860.jpg" alt="Силуэт" width="144"></div>
+                    <div class="col-sm-6">Полуприлегающий силуэт (Classic fit)<br> Это силуэт вещей, которые не очень плотно сидят на фигуре, скрывая некоторые недостатки, но в то же время такой силуэт нельзя назвать просторным. Такой силуэт подходит для большинства типов фигур.<br></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="collapsing-block closed">
+              <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Доставка и возврат</div>
+              <div class="collapsing-content">
+                <div class="inner">
+                  <p>Ознакомьтесь, пожалуйста, <a href="/about/delivery/">с условиями доставки.</a></p>
+                  <p>Если вещь по каким-то причинам не подошла Вам, мы без проблем обменяем ее на нужный размер или вернем деньги в установленный законом срок. Обмен и возврат возможны, только если вещь не была в употреблении, сохранены товарный вид (а также ярлыки, этикетки, упаковка) и чек. <a href="/about/delivery/vozvrat.php">Подробнее об обмене и возврате.</a></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="item-feedback">Если у вас есть вопросы, пожалуйста, позвоните нашим операторам! <br> <span>8 (495) 281-52-52</span></div>
+          </div>
         </div>
       </div>
+      <hr>
+      <div class="text-center"><a href="../" class="back-to-catalogue">Вернуться в каталог</a></div>
+      <hr>
       <!-- end /components/catalog.detail/-->
       <div id="viewCounter" data-url="/template/counter.json?IBLOCK_ID=3&amp;ELEMENT_ID=40647&amp;SITE_ID=s1"></div>
     </div>

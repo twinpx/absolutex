@@ -12,49 +12,129 @@ script( src="/components/catalog.detail/script.js" )
   .col-sm-4.text-right
     a.back-to-catalogue( href="../" ) Вернуться в каталог
 
-#catalogDetailWrap
+script( src="/template/zoomsl-3.0.min.js" )
+script( src="/components/catalog.detail/download.js" )
+    
+.b-catalog-detail__props-icons.text-right
+  .b-prop(style="color: #ca3538; border-color: #ca3538;") 35%
+  .b-prop(style="color: #528b16; border-color: #528b16;") Рекомендуем
+  .b-prop(style="color: #f09e00; border-color: #f09e00;") Хит
+  .b-prop(style="color: #8e42b1; border-color: #8e42b1;") Акция
+  .b-prop(style="color: #8e42b1; border-color: #8e42b1;") Новинка
+    
+hr
+  
+.row
 
-#catalogDetailNotAuth.row
-
-  .col-sm-6.b-catalog-detail__gallery 
-    .b-catalog-detail__gallery-placeholder
+  .col-sm-6.b-catalog-detail__gallery
+  
+    include ../../modules/gallery/fotorama
+    include ../../modules/gallery/include
     
   hr.visible-xs-block.i-size-L
   
   .col-sm-6
-
-    
   
-    .b-catalog-detail__auth-reg
+    - var id = 10
 
-      .b-catalog-detail__not-auth
-        .b-catalog-detail__not-auth__text Цены и размерная сетка доступны только зарегистрированным оптовым клиентам.
-        .b-catalog-detail__not-auth__buttons
-          .btn.btn-default Войти
-          a.btn.btn-default( href="/forms/reg/" ) Зарегистрироваться
-    
-      .b-catalog-detail__reg
-        .b-catalog-detail__reg__text Введите ваши регистрационные данные
-    
-        form( action="/components/catalog.detail/download.html" method="GET" ) 
+    #catalogDetailWrap
 
-          .b-catalog-detail__reg__form
-        
-            .b-float-label
-              input#regFormEmail( type="text" name="REGISTER[EMAIL]" value="" autocomplete="on" data-required="true" )
-              label( for="regFormEmail" ) Адрес e-mail
-              
-            hr.i-size-M
+    #catalogDetailNotAuth
+      
+      .b-catalog-detail__auth-reg
+
+        .b-catalog-detail__not-auth
+          .b-catalog-detail__not-auth__text Цены и размерная сетка доступны только зарегистрированным оптовым клиентам.
+          .b-catalog-detail__not-auth__buttons
+            .btn.btn-default Войти
+            a.btn.btn-default( href="/forms/reg/" ) Зарегистрироваться
+      
+        .b-catalog-detail__reg
+          .b-catalog-detail__reg__text Введите ваши регистрационные данные
+      
+          form( action="/components/catalog.detail/download.html" method="GET" ) 
+
+            .b-catalog-detail__reg__form
           
-            .b-float-label
-              input#regFormPass( type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off" data-required="true" )
-              label( for="regFormPass" ) Пароль
+              .b-float-label
+                input#regFormEmail( type="text" name="REGISTER[EMAIL]" value="" autocomplete="on" )
+                label( for="regFormEmail" ) Адрес e-mail
+                
+              hr.i-size-M
+            
+              .b-float-label
+                input#regFormPass( type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off" )
+                label( for="regFormPass" ) Пароль
 
-          .b-catalog-detail__reg__button
-            .btn.btn-default Войти 
+            .b-catalog-detail__reg__button
+              button.btn.btn-default( type="submit" ) Войти 
 
-        .b-catalog-detail__reg__note Или
-          | 
-          a( href="/forms/reg/" ) зарегистрируйтесь.
+          .b-catalog-detail__reg__note Или
+            | 
+            a( href="/forms/reg/" ) зарегистрируйтесь.
+
+    .item-information
+    
+      .b-catalog-brand
+        span Бренд: Bazioni
+      
+      .b-catalog-brand
+        img( src="/upload/brand-logo.jpg" width="130" height="40" alt="" )
+        span Бренд: Bazioni
+          
+    hr
+          
+    .item-details-accordeon
+    
+      .collapsing-block
+        .h3(style='padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;') Описание
+        .collapsing-content
+          .inner
+            p Мужской полуприлегающий костюм PIZANO синего цвета Classic fit ABSOLUTEX
+      .collapsing-block.closed
+        .h3(style='padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;') Детали
+        .collapsing-content
+          .inner
+            | Артикул: 1321* M PIZANO
+            br
+            | 			Состав: 30%шерсть, 50%вискоза, 20% полиэстер
+            br
+            | 									Сезон: Мультисезон
+            br
+            | 			Страна производитель: РОССИЯ
+            br
+      .collapsing-block.closed
+        .h3(style='padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;') Силуэт
+        .collapsing-content
+          .inner
+            hr
+            .row
+              .col-sm-4
+                img(src='/upload/iblock/a38/a38787fb79bf3a052425d3b79813f860.jpg', alt='Силуэт', width='144')
+              .col-sm-6
+                | Полуприлегающий силуэт (Classic fit)
+                br
+                |  Это силуэт вещей, которые не очень плотно сидят на фигуре, скрывая некоторые недостатки, но в то же время такой силуэт нельзя назвать просторным. Такой силуэт подходит для большинства типов фигур.
+                br
+      .collapsing-block.closed
+        .h3(style='padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;') Доставка и возврат
+        .collapsing-content
+          .inner
+            p
+              | Ознакомьтесь, пожалуйста, 
+              a(href='/about/delivery/') с условиями доставки.
+            p
+              | Если вещь по каким-то причинам не подошла Вам, мы без проблем обменяем ее на нужный размер или вернем деньги в установленный законом срок. Обмен и возврат возможны, только если вещь не была в употреблении, сохранены товарный вид (а также ярлыки, этикетки, упаковка) и чек. 
+              a(href='/about/delivery/vozvrat.php') Подробнее об обмене и возврате.
+              
+      hr
+
+      .item-feedback Если у вас есть вопросы, пожалуйста, позвоните нашим операторам! <br> <span>8 (495) 281-52-52</span>
+    
+hr
+.text-center
+  a.back-to-catalogue( href="../" ) Вернуться в каталог
+              
+hr
 
 // end /components/catalog.detail/
