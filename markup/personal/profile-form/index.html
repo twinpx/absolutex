@@ -321,6 +321,7 @@
           <div class="b-personal-menu"><span>Личные данные</span><a href="/personal/index.php?SECTION=account">Личный счет</a><a href="/about/contacts/">Контакты</a><a href="/personal/cart/">Корзина</a><a href="/personal/index.php?SECTION=orders">Мои заказы</a><a href="/personal/index.php?SECTION=orders&amp;amp;filter_history=Y">История заказов</a><a href="/personal/index.php?SECTION=profile"><b>Профили заказов</b></a></div>
           <!-- end /components/sale.personal.menu/-->
         </div>
+        <hr class="i-size-M hidden visible-xs-block">
         <div class="col-sm-9">
           <!-- start /components/sale.personal.profile.form/-->
           <link rel="stylesheet" href="/components/sale.personal.profile.form/style.css">
@@ -331,7 +332,7 @@
             <div class="b-profile-form__body b-form-wrapper">
               <form method="post" action="/registration/" name="regform" enctype="multipart/form-data">
                 <div class="b-float-label show-inn">
-                  <div class="b-float-label__inn">Заполнить по ИНН</div>
+                  <div id="InnFillButton" data-url="/components/sale.personal.profile.form/fillByInn.json" class="b-float-label__inn">Заполнить по ИНН</div>
                   <input id="regFormINN" type="text" name="REGISTER[INN]" value="" autocomplete="on" data-required="true">
                   <label for="regFormINN">ИНН</label>
                 </div>
