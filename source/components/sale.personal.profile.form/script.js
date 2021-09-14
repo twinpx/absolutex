@@ -1,9 +1,31 @@
 (function ($) {
-  'use strict';
-
   $(function () {
+    //show inn link
     $('#regFormINN').keyup(function () {
-      if (this.h) {
+      if (this.value.length >= 10) {
+        this.closest('.b-float-label').classList.add('show-inn');
+      } else {
+        this.closest('.b-float-label').classList.remove('show-inn');
+      }
+    });
+    //fill by inn
+    $('#InnFillButton').click(async function (e) {
+      e.preventDefault();
+      var button = this;
+      var response = await fetch(button.getAttribute('data-url'));
+      var result = await response.json();
+      if (result.STATUS === 'Y') {
+        var data = result.DATA;
+        Object.keys(data).forEach(function (key) {
+          var formControl;
+          if (data[key]) {
+            formControl = document.querySelector(`[name="${key}"]`);
+            formControl.value = data[key];
+            formControl.parentNode
+              .querySelector('label')
+              .classList.add('active');
+          }
+        });
       }
     });
   });

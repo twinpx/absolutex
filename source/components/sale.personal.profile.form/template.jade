@@ -10,7 +10,7 @@ script( src="/components/sale.personal.profile.form/script.js" )
     form(method="post" action="/registration/" name="regform" enctype="multipart/form-data")
 
       .b-float-label.show-inn
-        .b-float-label__inn Заполнить по ИНН
+        #InnFillButton.b-float-label__inn( data-url="/components/sale.personal.profile.form/fillByInn.json" ) Заполнить по ИНН
         input#regFormINN( type="text" name="REGISTER[INN]" value="" autocomplete="on" data-required="true" )
         label( for="regFormINN" ) ИНН
         
