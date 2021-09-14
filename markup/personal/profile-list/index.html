@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="bx-no-touch">
   <head>
-    <title>Main page | absolutex</title>
+    <title>Профили заказов | Seller</title>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -306,139 +306,62 @@
       </li>
     </ul><a id="seller-tuner-icon" data-activates="seller-tuner" class="hidden-xs"><span style="background-image: url( '/template/images/headers/header_1_6_0_1/tuner.svg' );"></span></a>
     <!-- end /components/header_1_6_0_1/-->
-    <div class="bj-page-content container-fluid">
-      <ol class="breadcrumb">
+    <div class="container-fluid">
+      <ol class="breadcrumb hidden-xs">
         <li><a href="/" title="Главная страница">Главная страница</a></li>
-        <li><a href="/catalog/" title="Каталог">Каталог</a></li>
-        <li><a href="/catalog/muzhchinam/" title="Мужчинам">Мужчинам</a></li>
-        <li><a href="/catalog/verkhnyaya_odezhda/" title="Верхняя одежда">Верхняя одежда</a></li>
-        <li><a href="/catalog/palto/" title="Пальто">Пальто</a></li>
-        <li><a href="/catalog/chernoe_muzhskoe_palto/" title="Черное мужское пальто">Черное мужское пальто</a></li>
-        <li><span>Мужское зимнее шерстяное пальто VENTUNO BLACK черно-серого цвета</span></li>
+        <li><a href="/cart/" title="Моя корзина">Моя корзина</a></li>
+        <li><span>Профили заказов</span></li>
       </ol>
-      <!-- start /components/catalog.detail/-->
-      <link rel="stylesheet" href="/components/catalog.detail/style.css">
-      <script src="/components/catalog.detail/script.js"></script>
+      <h1>Профили заказов</h1>
       <div class="row">
-        <style>#catalogDetailPrevLink, #catalogDetailNextLink { display: none; }</style><a id="catalogDetailPrevLink" href="">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-            <g id="arrow-left">
-              <polyline points="36.31 44.27 24.04 32 36.31 19.73" class="catalog-detail-svg"></polyline>
-            </g>
-          </svg></a><a id="catalogDetailNextLink" href="" class="i-appear">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-            <g id="arrow-right">
-              <polyline points="27.69 19.73 39.96 32 27.69 44.27" class="catalog-detail-svg"></polyline>
-            </g>
-          </svg></a>
-        <div class="col-sm-8">
-          <h1 class="i-small">Мужское зимнее шерстяное пальто VENTUNO BLACK черно-серого цвета</h1>
+        <div class="col-sm-3">
+          <!-- start /components/sale.personal.menu/-->
+          <link rel="stylesheet" href="/components/sale.personal.menu/style.css">
+          <script src="/components/sale.personal.menu/script.js"></script>
+          <div class="b-personal-menu"><span>Личные данные</span><a href="/personal/index.php?SECTION=account">Личный счет</a><a href="/about/contacts/">Контакты</a><a href="/personal/cart/">Корзина</a><a href="/personal/index.php?SECTION=orders">Мои заказы</a><a href="/personal/index.php?SECTION=orders&amp;amp;filter_history=Y">История заказов</a><a href="/personal/index.php?SECTION=profile">Профили заказов</a></div>
+          <!-- end /components/sale.personal.menu/-->
         </div>
-        <div class="col-sm-4 text-right"><a href="../" class="back-to-catalogue">Вернуться в каталог</a></div>
-      </div>
-      <script src="/template/zoomsl-3.0.min.js"></script>
-      <script src="/components/catalog.detail/download.js"></script>
-      <div class="b-catalog-detail__props-icons text-right">
-        <div style="color: #ca3538; border-color: #ca3538;" class="b-prop">35%</div>
-        <div style="color: #528b16; border-color: #528b16;" class="b-prop">Рекомендуем</div>
-        <div style="color: #f09e00; border-color: #f09e00;" class="b-prop">Хит</div>
-        <div style="color: #8e42b1; border-color: #8e42b1;" class="b-prop">Акция</div>
-        <div style="color: #8e42b1; border-color: #8e42b1;" class="b-prop">Новинка</div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-sm-6 b-catalog-detail__gallery">
-          <link href="/template/libs/fotorama-4.6.4.css" rel="stylesheet">
-          <script src="/template/libs/fotorama-4.6.4.js"></script>
-          <div data-nav="thumbs" class="fotorama"><img src="/upload/catalog/1.jpg" alt=""><img src="/upload/catalog/2.jpg" alt=""><img src="/upload/catalog/3.jpg" alt=""><img src="/upload/catalog/4.jpg" alt=""></div>
-        </div>
-        <hr class="visible-xs-block i-size-L">
-        <div class="col-sm-6">
-          <div id="catalogDetailWrap"></div>
-          <div id="catalogDetailNotAuth">
-            <div class="b-catalog-detail__auth-reg">
-              <div class="b-catalog-detail__not-auth">
-                <div class="b-catalog-detail__not-auth__text">Цены и размерная сетка доступны только зарегистрированным оптовым клиентам.</div>
-                <div class="b-catalog-detail__not-auth__buttons">
-                  <div class="btn btn-default">Войти</div><a href="/forms/reg/" class="btn btn-default">Зарегистрироваться</a>
-                </div>
-              </div>
-              <div class="b-catalog-detail__reg">
-                <div class="b-catalog-detail__reg__text">Введите ваши регистрационные данные</div>
-                <form action="/components/catalog.detail/download.html" method="GET"> 
-                  <div class="b-catalog-detail__reg__form">
-                    <div class="b-float-label">
-                      <input id="regFormEmail" type="text" name="REGISTER[EMAIL]" value="" autocomplete="on">
-                      <label for="regFormEmail">Адрес e-mail</label>
-                    </div>
-                    <hr class="i-size-M">
-                    <div class="b-float-label">
-                      <input id="regFormPass" type="password" name="REGISTER[PASSWORD]" value="" autocomplete="off">
-                      <label for="regFormPass">Пароль</label>
-                    </div>
-                  </div>
-                  <div class="b-catalog-detail__reg__button">
-                    <button type="submit" class="btn btn-default">Войти </button>
-                  </div>
-                </form>
-                <div class="b-catalog-detail__reg__note">
-                  Или
-                   <a href="/forms/reg/">зарегистрируйтесь.</a>
-                </div>
-              </div>
-            </div>
+        <hr class="i-size-M hidden visible-xs-block">
+        <div class="col-sm-9">
+          <!-- start /components/sale.personal.profile.list/-->
+          <link rel="stylesheet" href="/components/sale.personal.profile.list/style.css">
+          <script src="/components/sale.personal.profile.list/script.js"></script>
+          <div id="profile-list">
+            <table class="table">
+              <tbody>
+                <tr class="tr--hoverable">
+                  <td>ООО «Твин пикс»</td>
+                  <td><a href=""><i style="background-image: url(/components/sale.personal.profile.list/img/doc.svg)" class="i--doc"></i><em>
+                        Ваш договор:
+                         <em>С09092021-12</em></em></a></td>
+                  <td><i style="background-image: url(/components/sale.personal.profile.list/img/edit.svg)" class="i--edit"></i></td>
+                </tr>
+                <tr class="tr--hoverable">
+                  <td>ООО «Твин пикс»</td>
+                  <td><a href=""><i style="background-image: url(/components/sale.personal.profile.list/img/doc.svg)" class="i--doc"></i><em>
+                        Ваш договор:
+                         <em>С09092021-12</em></em></a></td>
+                  <td><i style="background-image: url(/components/sale.personal.profile.list/img/edit.svg)" class="i--edit"></i></td>
+                </tr>
+                <tr> 
+                  <td>ООО «Твин пикс»</td>
+                  <td><span><i style="background-image: url(/components/sale.personal.profile.list/img/time.svg)" class="i--time"></i>Ваш договор готовится</span></td>
+                  <td><i style="background-image: url(/components/sale.personal.profile.list/img/edit.svg)" class="i--edit"></i></td>
+                </tr>
+                <tr class="tr--hoverable">
+                  <td>ООО «Твин пикс»</td>
+                  <td><a href=""><i style="background-image: url(/components/sale.personal.profile.list/img/doc.svg)" class="i--doc"></i><em>
+                        Ваш договор:
+                         <em>С09092021-12</em></em></a></td>
+                  <td><i style="background-image: url(/components/sale.personal.profile.list/img/edit.svg)" class="i--edit"></i></td>
+                </tr>
+              </tbody>
+            </table>
+            <hr><a href="" class="button button-default">Добавить компанию</a>
           </div>
-          <div class="item-information">
-            <div class="b-catalog-brand"><span>Бренд: Bazioni</span></div>
-            <div class="b-catalog-brand"><img src="/upload/brand-logo.jpg" width="130" height="40" alt=""><span>Бренд: Bazioni</span></div>
-          </div>
-          <hr>
-          <div class="item-details-accordeon">
-            <div class="collapsing-block">
-              <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Описание</div>
-              <div class="collapsing-content">
-                <div class="inner">
-                  <p>Мужской полуприлегающий костюм PIZANO синего цвета Classic fit ABSOLUTEX</p>
-                </div>
-              </div>
-            </div>
-            <div class="collapsing-block closed">
-              <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Детали</div>
-              <div class="collapsing-content">
-                <div class="inner">Артикул: 1321* M PIZANO<br>			Состав: 30%шерсть, 50%вискоза, 20% полиэстер<br>									Сезон: Мультисезон<br>			Страна производитель: РОССИЯ<br></div>
-              </div>
-            </div>
-            <div class="collapsing-block closed">
-              <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Силуэт</div>
-              <div class="collapsing-content">
-                <div class="inner">
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-4"><img src="/upload/iblock/a38/a38787fb79bf3a052425d3b79813f860.jpg" alt="Силуэт" width="144"></div>
-                    <div class="col-sm-6">Полуприлегающий силуэт (Classic fit)<br> Это силуэт вещей, которые не очень плотно сидят на фигуре, скрывая некоторые недостатки, но в то же время такой силуэт нельзя назвать просторным. Такой силуэт подходит для большинства типов фигур.<br></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="collapsing-block closed">
-              <div style="padding-top: 15px; padding-bottom: 15px; margin:0px; cursor:pointer;" class="h3">Доставка и возврат</div>
-              <div class="collapsing-content">
-                <div class="inner">
-                  <p>Ознакомьтесь, пожалуйста, <a href="/about/delivery/">с условиями доставки.</a></p>
-                  <p>Если вещь по каким-то причинам не подошла Вам, мы без проблем обменяем ее на нужный размер или вернем деньги в установленный законом срок. Обмен и возврат возможны, только если вещь не была в употреблении, сохранены товарный вид (а также ярлыки, этикетки, упаковка) и чек. <a href="/about/delivery/vozvrat.php">Подробнее об обмене и возврате.</a></p>
-                </div>
-              </div>
-            </div>
-            <hr>
-            <div class="item-feedback">Если у вас есть вопросы, пожалуйста, позвоните нашим операторам! <br> <span>8 (495) 281-52-52</span></div>
-          </div>
+          <!-- end /components/sale.personal.profile.list/-->
         </div>
       </div>
-      <hr>
-      <div class="text-center"><a href="../" class="back-to-catalogue">Вернуться в каталог</a></div>
-      <hr>
-      <!-- end /components/catalog.detail/-->
-      <div id="viewCounter" data-url="/template/counter.json?IBLOCK_ID=3&amp;ELEMENT_ID=40647&amp;SITE_ID=s1"></div>
     </div>
     <div id="b-float-phone">
       <div class="b-float-phone__bg"></div><span class="b-float-phone__content"><span class="bj-footer-earphone-icon"></span><span class="b-float-phone__text">+7 499 35 007 98</span></span>
