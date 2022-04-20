@@ -12,7 +12,7 @@
     $('#InnFillButton').click(async function (e) {
       e.preventDefault();
       var button = this;
-      var response = await fetch(button.getAttribute('data-url'));
+      var response = await fetch(`${button.getAttribute('data-url')}?inn=${document.getElementById('InnFillButton').parentNode.querySelector('input').value}`);
       var result = await response.json();
       if (result.STATUS === 'Y') {
         var data = result.DATA;
@@ -20,10 +20,12 @@
           var formControl;
           if (data[key]) {
             formControl = document.querySelector(`[name="${key}"]`);
-            formControl.value = data[key];
-            formControl.parentNode
-              .querySelector('label')
-              .classList.add('active');
+	    if (formControl) {
+              formControl.value = data[key];
+              formControl.parentNode
+                .querySelector('label')
+                .classList.add('active');
+	    }
           }
         });
       }
